@@ -1,11 +1,19 @@
 package com.mj.childrensapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends Activity {
+	
+	public void gotoGame(View view) {
+		//Sends user to screen 2
+		Intent intent = new Intent (this, Game.class);
+		startActivity(intent);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
