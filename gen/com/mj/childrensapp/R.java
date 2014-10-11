@@ -22,11 +22,36 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int box=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int tempgameback=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080001;
-        public static final int buttonGame=0x7f080000;
+        public static final int action_settings=0x7f080018;
+        public static final int buttonGame=0x7f080017;
+        public static final int imageView1=0x7f080007;
+        public static final int imageView10=0x7f080010;
+        public static final int imageView11=0x7f080011;
+        public static final int imageView12=0x7f080012;
+        public static final int imageView13=0x7f080013;
+        public static final int imageView14=0x7f080014;
+        public static final int imageView15=0x7f080015;
+        public static final int imageView16=0x7f080016;
+        public static final int imageView2=0x7f080008;
+        public static final int imageView3=0x7f080009;
+        public static final int imageView4=0x7f08000a;
+        public static final int imageView5=0x7f08000b;
+        public static final int imageView6=0x7f08000c;
+        public static final int imageView7=0x7f08000d;
+        public static final int imageView8=0x7f08000e;
+        public static final int imageView9=0x7f08000f;
+        public static final int linear1=0x7f080002;
+        public static final int linear2=0x7f080005;
+        public static final int linearLayout1=0x7f080006;
+        public static final int micImage=0x7f080001;
+        public static final int start=0x7f080003;
+        public static final int stop=0x7f080004;
+        public static final int text1=0x7f080000;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;
