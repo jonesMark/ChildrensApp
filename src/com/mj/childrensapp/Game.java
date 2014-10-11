@@ -25,7 +25,7 @@ public class Game extends Activity {
 	private Button startBtn;
 	private Button stopBtn;
 	private TextView text;
-	private int mInterval = 250; 
+	private int mInterval = 250; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double ampNum = 0;
 	private double veiwNum = 0;
@@ -34,7 +34,7 @@ public class Game extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
-
+		//connect text1 to text so we can update it easily
 		text = (TextView) findViewById(R.id.text1);
 		// store it to sd card
 		outputFile = Environment.getExternalStorageDirectory().
@@ -85,7 +85,7 @@ public class Game extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+	//what happens when you press the start button
 	public void start(View view){
 		try {
 			myRecorder.prepare();
@@ -98,16 +98,17 @@ public class Game extends Activity {
 			// prepare() fails
 			e.printStackTrace();
 		}
-
+		// disable start button, enable stop
 		startBtn.setEnabled(false);
 		stopBtn.setEnabled(true);
 
 		text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
+		//start the repeating task
 		startRepeatingTask();
 		Toast.makeText(getApplicationContext(), "Start recording...", 
 				Toast.LENGTH_SHORT).show();
 	}
-
+	// what happens when you press the stop button
 	public void stop(View view){
 		try {
 			myRecorder.stop();
@@ -129,7 +130,7 @@ public class Game extends Activity {
 		}
 		outputFile = Environment.getExternalStorageDirectory().
 				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-
+		//reset the recorder and handler so you can start again if you want
 		myRecorder = new MediaRecorder();
 		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -138,7 +139,7 @@ public class Game extends Activity {
 		mHandler = new Handler();
 	}
 
-
+	
 	private double getAmplitude() {
 		if (myRecorder != null) {
 			double m = myRecorder.getMaxAmplitude();
@@ -151,18 +152,23 @@ public class Game extends Activity {
 	public void GetAmp(View view) {
 		text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 	}
+	//this is the repeating task
 	Runnable mStatusChecker = new Runnable() {
 		@Override 
 		public void run() {
 			mHandler.postDelayed(mStatusChecker, mInterval);
 			ampNum =getAmplitude();
+			//update text displaying amp
 			text.setText("Recording Point: Recording, Amp: "+ ampNum);
+			//load the bar into an array
 			ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15),(ImageView)findViewById(R.id.imageView16)};
 			veiwNum = ampNum/2500;
 			int i=0;
+			//set bar to be invisible
 			for (int k=0; k<16; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
 			}
+			//make the bars visible based on the amp.
 			while (veiwNum >0){
 				soundBar[i].setVisibility(View.VISIBLE);
 				i++;
