@@ -6,24 +6,6 @@
     android:gravity="top"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Recording Point: -"
-        android:visibility="invisible"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#F00" />
-
-        <Button
-            android:id="@+id/stop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:enabled="false"
-            android:text="stop" />
-
 
     <LinearLayout
         android:id="@+id/linear2"
@@ -46,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/text1"
         android:layout_marginRight="25dp"
         android:orientation="vertical" >
     </LinearLayout>
@@ -216,7 +197,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView3"
-        android:layout_toRightOf="@+id/stop"
+        android:layout_marginLeft="75dp"        
         android:src="@drawable/gamezookeep" />
 
     <ImageView
@@ -258,7 +239,7 @@
         android:id="@+id/imageView21"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:visibility="invisible"
+                android:visibility="invisible"
         android:src="@drawable/winproto" />
 
 </RelativeLayout>

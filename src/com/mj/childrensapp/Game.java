@@ -22,7 +22,7 @@ public class Game extends Activity {
 	private MediaPlayer myPlayer;
 	private String outputFile = null;
 	//private Button startBtn;
-	private Button stopBtn;
+	//private Button stopBtn;
 	private ImageButton imageStart;
 	private int mInterval = 250; //this is the timestep in miliseconds 
 	private Handler mHandler;
@@ -57,15 +57,7 @@ public class Game extends Activity {
 			}
 		});
 
-		stopBtn = (Button)findViewById(R.id.stop);
-		stopBtn.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				stop(v);
-			}
-		});
 
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,40 +92,12 @@ public class Game extends Activity {
 		}
 		// disable start button, enable stop
 		imageStart.setEnabled(false);
-		stopBtn.setEnabled(true);
 
 		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 		//start the repeating task
 		startRepeatingTask();
 	}
-	// what happens when you press the stop button
-	public void stop(View view){
-		try {
-			myRecorder.stop();
-			myRecorder.release();
-			myRecorder  = null;
 
-			stopBtn.setEnabled(false);
-			imageStart.setEnabled(true);
-			//text.setText("Recording Point: Stop recording");
-			stopRepeatingTask();
-		} catch (IllegalStateException e) {
-			//  it is called before start()
-			e.printStackTrace();
-		} catch (RuntimeException e) {
-			// no valid audio/video data has been received
-			e.printStackTrace();
-		}
-		outputFile = Environment.getExternalStorageDirectory().
-				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-		//reset the recorder and handler so you can start again if you want
-		myRecorder = new MediaRecorder();
-		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-		myRecorder.setOutputFile(outputFile);
-		mHandler = new Handler();
-	}
 
 	
 	private double getAmplitude() {
@@ -172,8 +136,6 @@ public class Game extends Activity {
 						myRecorder.release();
 						myRecorder  = null;
 
-						stopBtn.setEnabled(false);
-						imageStart.setEnabled(true);
 						//text.setText("Recording Point: Stop recording");
 						stopRepeatingTask();
 					} catch (IllegalStateException e) {
