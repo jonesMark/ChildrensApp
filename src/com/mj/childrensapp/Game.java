@@ -3,28 +3,27 @@ package com.mj.childrensapp;
 import java.io.IOException;
 
 import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class Game extends Activity {
 
 	private MediaRecorder myRecorder;
 	private MediaPlayer myPlayer;
 	private String outputFile = null;
-	private Button startBtn;
+	//private Button startBtn;
 	private Button stopBtn;
-	private TextView text;
+	private ImageButton imageStart;
 	private int mInterval = 250; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double ampNum = 0;
@@ -35,7 +34,7 @@ public class Game extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
 		//connect text1 to text so we can update it easily
-		text = (TextView) findViewById(R.id.text1);
+		//text = (TextView) findViewById(R.id.text1);
 		// store it to sd card
 		outputFile = Environment.getExternalStorageDirectory().
 				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
@@ -47,8 +46,8 @@ public class Game extends Activity {
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
 
-		startBtn = (Button)findViewById(R.id.start);
-		startBtn.setOnClickListener(new OnClickListener() {
+		imageStart = (ImageButton)findViewById(R.id.ImageStart);
+		imageStart.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -99,14 +98,12 @@ public class Game extends Activity {
 			e.printStackTrace();
 		}
 		// disable start button, enable stop
-		startBtn.setEnabled(false);
+		imageStart.setEnabled(false);
 		stopBtn.setEnabled(true);
 
-		text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
+		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 		//start the repeating task
 		startRepeatingTask();
-		Toast.makeText(getApplicationContext(), "Start recording...", 
-				Toast.LENGTH_SHORT).show();
 	}
 	// what happens when you press the stop button
 	public void stop(View view){
@@ -116,11 +113,9 @@ public class Game extends Activity {
 			myRecorder  = null;
 
 			stopBtn.setEnabled(false);
-			startBtn.setEnabled(true);
-			text.setText("Recording Point: Stop recording");
+			imageStart.setEnabled(true);
+			//text.setText("Recording Point: Stop recording");
 			stopRepeatingTask();
-			Toast.makeText(getApplicationContext(), "Stop recording...",
-					Toast.LENGTH_SHORT).show();
 		} catch (IllegalStateException e) {
 			//  it is called before start()
 			e.printStackTrace();
@@ -150,7 +145,7 @@ public class Game extends Activity {
 		}
 	}
 	public void GetAmp(View view) {
-		text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
+		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 	}
 	//this is the repeating task
 	Runnable mStatusChecker = new Runnable() {
@@ -159,7 +154,7 @@ public class Game extends Activity {
 			mHandler.postDelayed(mStatusChecker, mInterval);
 			ampNum =getAmplitude();
 			//update text displaying amp
-			text.setText("Recording Point: Recording, Amp: "+ ampNum);
+			//text.setText("Recording Point: Recording, Amp: "+ ampNum);
 			//load the bar into an array
 			ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15),(ImageView)findViewById(R.id.imageView16)};
 			veiwNum = ampNum/2500;

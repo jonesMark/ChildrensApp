@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tempgameback"
+    android:background="@drawable/backgroundwithsideproto"
     android:gravity="top"
     tools:context=".MainActivity" >
 
@@ -12,24 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Recording Point: -"
+        android:visibility="invisible"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#F00" />
-
-
-    <LinearLayout
-        android:id="@+id/linear1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text1"
-        android:layout_marginTop="10dp"
-        android:layout_toLeftOf="@+id/micImage"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="start" />
 
         <Button
             android:id="@+id/stop"
@@ -38,15 +23,22 @@
             android:layout_marginLeft="10dp"
             android:enabled="false"
             android:text="stop" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear1"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ImageStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:src="@drawable/gamestartbuttonproto" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -203,6 +195,40 @@
         android:layout_alignParentRight="true"
         android:src="@drawable/box" />
 
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toRightOf="@+id/stop"
+        android:src="@drawable/gamezookeep" />
 
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="160dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:src="@drawable/cowsaysproto" />
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="160dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:src="@drawable/canyousayproto" />
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="160dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:src="@drawable/cowproto" />
 
 </RelativeLayout>
