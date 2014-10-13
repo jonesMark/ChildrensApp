@@ -164,9 +164,9 @@ public class Game extends Activity {
 			for (int k=0; k<16; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
 			}
-			if (veiwNum > 7 && veiwNum < 11){
+			if (veiwNum > 7 && veiwNum < 12){
 				winNum++;
-				if (winNum ==4){
+				if (winNum ==8){
 					try {
 						myRecorder.stop();
 						myRecorder.release();
@@ -185,6 +185,7 @@ public class Game extends Activity {
 					}
 					outputFile = Environment.getExternalStorageDirectory().
 							getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+					findViewById(R.id.imageView21).setVisibility(View.VISIBLE);
 				}
 			}
 			else{
