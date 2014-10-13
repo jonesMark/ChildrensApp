@@ -24,17 +24,18 @@ public final class R {
     public static final class drawable {
         public static final int backgroundwithsideproto=0x7f020000;
         public static final int box=0x7f020001;
-        public static final int canyousayproto=0x7f020002;
-        public static final int cowproto=0x7f020003;
-        public static final int cowsaysproto=0x7f020004;
-        public static final int gamestartbuttonproto=0x7f020005;
-        public static final int gamezookeep=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
+        public static final int bracketproto=0x7f020002;
+        public static final int canyousayproto=0x7f020003;
+        public static final int cowproto=0x7f020004;
+        public static final int cowsaysproto=0x7f020005;
+        public static final int gamestartbuttonproto=0x7f020006;
+        public static final int gamezookeep=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
     }
     public static final class id {
         public static final int ImageStart=0x7f080003;
-        public static final int action_settings=0x7f08001a;
-        public static final int buttonGame=0x7f080019;
+        public static final int action_settings=0x7f08001b;
+        public static final int buttonGame=0x7f08001a;
         public static final int imageButton1=0x7f080015;
         public static final int imageView1=0x7f080005;
         public static final int imageView10=0x7f08000e;
@@ -48,6 +49,7 @@ public final class R {
         public static final int imageView18=0x7f080017;
         public static final int imageView19=0x7f080018;
         public static final int imageView2=0x7f080006;
+        public static final int imageView20=0x7f080019;
         public static final int imageView3=0x7f080007;
         public static final int imageView4=0x7f080008;
         public static final int imageView5=0x7f080009;

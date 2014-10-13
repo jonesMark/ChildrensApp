@@ -28,6 +28,7 @@ public class Game extends Activity {
 	private Handler mHandler;
 	private double ampNum = 0;
 	private double veiwNum = 0;
+	private int winNum = 0; //counts how long they're in the winning range
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -162,6 +163,32 @@ public class Game extends Activity {
 			//set bar to be invisible
 			for (int k=0; k<16; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
+			}
+			if (veiwNum > 7 && veiwNum < 11){
+				winNum++;
+				if (winNum ==4){
+					try {
+						myRecorder.stop();
+						myRecorder.release();
+						myRecorder  = null;
+
+						stopBtn.setEnabled(false);
+						imageStart.setEnabled(true);
+						//text.setText("Recording Point: Stop recording");
+						stopRepeatingTask();
+					} catch (IllegalStateException e) {
+						//  it is called before start()
+						e.printStackTrace();
+					} catch (RuntimeException e) {
+						// no valid audio/video data has been received
+						e.printStackTrace();
+					}
+					outputFile = Environment.getExternalStorageDirectory().
+							getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+				}
+			}
+			else{
+				winNum =0;
 			}
 			//make the bars visible based on the amp.
 			while (veiwNum >0){
