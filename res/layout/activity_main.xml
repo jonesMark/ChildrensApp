@@ -1,22 +1,27 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mj.childrensapp.MainActivity" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/maincomplete"
+    android:orientation="vertical" >
 
     <Button
-        android:id="@+id/buttonGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="102dp"
-        android:layout_marginTop="60dp"
-        android:onClick="gotoGame"
-        android:text="Game" />
+        android:id="@+id/playbutton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="0.08"
+         />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/tutbutton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="0.90"
+         />
+
+    <Button
+        android:id="@+id/myzoobutton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        />
+
+</LinearLayout>

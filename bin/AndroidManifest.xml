@@ -7,9 +7,6 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="21" />
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" /> 
 
     <application
         android:allowBackup="true"
@@ -36,7 +33,6 @@
         <activity
             android:name=".Game"
             android:label="@string/title_activity_game"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:screenOrientation="landscape" >
         </activity>
         <activity
@@ -48,6 +44,10 @@
             android:name=".Tuturial2"
             android:label="@string/title_activity_tuturial2"
             android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".MyZoo"
+            android:label="@string/title_activity_my_zoo" >
         </activity>
     </application>
 

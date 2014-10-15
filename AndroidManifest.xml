@@ -45,6 +45,10 @@
             android:label="@string/title_activity_tuturial2"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name=".MyZoo"
+            android:label="@string/title_activity_my_zoo" >
+        </activity>
     </application>
 
 </manifest>
