@@ -11,7 +11,7 @@
     <application
         android:allowBackup="true"
         android:configChanges="keyboard|keyboardHidden|orientation"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/gamezookeep"
         android:label="@string/app_name"
         android:screenOrientation="landscape"
         android:theme="@style/AppTheme" >
