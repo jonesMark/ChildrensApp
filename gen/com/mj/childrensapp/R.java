@@ -22,21 +22,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int backgroundwithsideproto=0x7f020000;
-        public static final int box=0x7f020001;
-        public static final int bracketproto=0x7f020002;
-        public static final int canyousayproto=0x7f020003;
-        public static final int cowproto=0x7f020004;
-        public static final int cowsaysproto=0x7f020005;
-        public static final int gamestartbuttonproto=0x7f020006;
-        public static final int gamezookeep=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int maincomplete=0x7f020009;
-        public static final int winproto=0x7f02000a;
+        public static final int background_plain=0x7f020000;
+        public static final int backgroundwithsideproto=0x7f020001;
+        public static final int box=0x7f020002;
+        public static final int bracketproto=0x7f020003;
+        public static final int canyousayproto=0x7f020004;
+        public static final int cowproto=0x7f020005;
+        public static final int cowsaysproto=0x7f020006;
+        public static final int gamestartbuttonproto=0x7f020007;
+        public static final int gamezookeep=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int maincomplete=0x7f02000a;
+        public static final int winproto=0x7f02000b;
     }
     public static final class id {
         public static final int ImageStart=0x7f080001;
-        public static final int action_settings=0x7f08001c;
+        public static final int action_settings=0x7f08001d;
         public static final int imageButton1=0x7f080013;
         public static final int imageView1=0x7f080003;
         public static final int imageView10=0x7f08000c;
@@ -63,6 +64,7 @@ public final class R {
         public static final int linearLayout1=0x7f080002;
         public static final int myzoobutton=0x7f08001b;
         public static final int playbutton=0x7f080019;
+        public static final int textView1=0x7f08001c;
         public static final int tutbutton=0x7f08001a;
     }
     public static final class layout {
