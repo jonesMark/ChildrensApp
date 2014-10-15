@@ -8,27 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imageView1"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
-            android:background="@null"
-            android:text="Moo!"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_above="@+id/textView1"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="49dp"
+            android:layout_marginRight="24dp"
             android:background="@null"
             android:src="@drawable/cowproto" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_marginBottom="39dp"
+            android:layout_marginRight="21dp"
+            android:background="@null"
+            android:text="Moo!"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
     </RelativeLayout>
 
 </LinearLayout>

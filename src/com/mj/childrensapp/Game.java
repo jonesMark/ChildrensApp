@@ -25,6 +25,7 @@ public class Game extends Activity {
 	private ImageButton imageStart;
 	private int mInterval = 250; //this is the timestep in miliseconds 
 	private Handler mHandler;
+	private double multiplier = 1.05; //a little more control added, maybe use for the future.
 	private double ampNum = 0;
 	private double veiwNum = 0;
 	private int winNum = 0; //counts how long they're in the winning range
@@ -121,7 +122,7 @@ public class Game extends Activity {
 			//text.setText("Recording Point: Recording, Amp: "+ ampNum);
 			//load the bar into an array
 			ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15),(ImageView)findViewById(R.id.imageView16)};
-			veiwNum = ampNum/2500;
+			veiwNum = ampNum/2500*multiplier;
 			int i=0;
 			//set bar to be invisible
 			for (int k=0; k<16; k++) {
