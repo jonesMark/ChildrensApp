@@ -12,17 +12,17 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	
 	public void gotoGame(View view) {
-		//Sends user to screen 2
+		//Sends user to game screen
 		Intent intent = new Intent (this, Game.class);
 		startActivity(intent);
 	}
 	public void gotoTut(View view) {
-		//Sends user to screen 2
+		//Sends user to tutorial screen 1
 		Intent intent = new Intent (this, Tuturial.class);
 		startActivity(intent);
 	}
 	public void gotoMyzoo(View view) {
-		//Sends user to screen 2
+		//Sends user to "my zoo" screen
 		Intent intent = new Intent (this, MyZoo.class);
 		startActivity(intent);
 	}
