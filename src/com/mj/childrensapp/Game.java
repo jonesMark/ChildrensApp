@@ -23,7 +23,7 @@ public class Game extends Activity {
 	//private Button startBtn;
 	//private Button stopBtn;
 	private ImageButton imageStart;
-	private int mInterval = 250; //this is the timestep in miliseconds 
+	private int mInterval = 150; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double multiplier = 1.05; //a little more control added, maybe use for the future.
 	private double ampNum = 0;
