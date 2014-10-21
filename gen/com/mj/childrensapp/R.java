@@ -47,7 +47,7 @@ public final class R {
     }
     public static final class id {
         public static final int ImageStart=0x7f080001;
-        public static final int action_settings=0x7f08001d;
+        public static final int action_settings=0x7f08001c;
         public static final int imageButton1=0x7f080013;
         public static final int imageView1=0x7f080003;
         public static final int imageView10=0x7f08000c;
@@ -74,7 +74,6 @@ public final class R {
         public static final int linearLayout1=0x7f080002;
         public static final int myzoobutton=0x7f08001b;
         public static final int playbutton=0x7f080019;
-        public static final int textView1=0x7f08001c;
         public static final int tutbutton=0x7f08001a;
     }
     public static final class layout {
