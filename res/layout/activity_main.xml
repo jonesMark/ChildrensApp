@@ -1,27 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/maincomplete"
+    android:layout_gravity="center"
+    android:background="@drawable/mainbackgroundfinal"
     android:orientation="vertical" >
+     
 
-    <Button
+    <ImageButton
+        android:id="@+id/imageView4"
+            android:gravity="center"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/mainkeeperfinal" />
+
+    <ImageButton
         android:id="@+id/playbutton"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_weight="0.08"
-         />
+            android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playbuttonfinal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/tutbutton"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_weight="0.90"
-         />
+            android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tutbuttonfinal" />
 
-    <Button
+    <ImageButton
         android:id="@+id/myzoobutton"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        />
+            android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/myzoofinal" />
 
 </LinearLayout>

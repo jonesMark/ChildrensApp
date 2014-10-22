@@ -33,17 +33,22 @@ public final class R {
         public static final int gamezookeep=0x7f020008;
         public static final int ic_launcher=0x7f020009;
         public static final int learn1proto=0x7f02000a;
-        public static final int maincomplete=0x7f02000b;
-        public static final int mkfinal1=0x7f02000c;
-        public static final int mkfinal2=0x7f02000d;
-        public static final int mkfinal3=0x7f02000e;
-        public static final int mkfinal4=0x7f02000f;
-        public static final int mkfinal5=0x7f020010;
-        public static final int mkfinal6=0x7f020011;
-        public static final int mkfinal7=0x7f020012;
-        public static final int mkfinal8=0x7f020013;
-        public static final int mkfinal9=0x7f020014;
-        public static final int winproto=0x7f020015;
+        public static final int mainbackgroundfinal=0x7f02000b;
+        public static final int maincomplete=0x7f02000c;
+        public static final int mainkeeperfinal=0x7f02000d;
+        public static final int mkfinal1=0x7f02000e;
+        public static final int mkfinal2=0x7f02000f;
+        public static final int mkfinal3=0x7f020010;
+        public static final int mkfinal4=0x7f020011;
+        public static final int mkfinal5=0x7f020012;
+        public static final int mkfinal6=0x7f020013;
+        public static final int mkfinal7=0x7f020014;
+        public static final int mkfinal8=0x7f020015;
+        public static final int mkfinal9=0x7f020016;
+        public static final int myzoofinal=0x7f020017;
+        public static final int playbuttonfinal=0x7f020018;
+        public static final int tutbuttonfinal=0x7f020019;
+        public static final int winproto=0x7f02001a;
     }
     public static final class id {
         public static final int ImageStart=0x7f080001;

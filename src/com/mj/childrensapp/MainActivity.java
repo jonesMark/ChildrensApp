@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 	
@@ -32,9 +33,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//initiallize buttones
-		Button gameButton = (Button) findViewById(R.id.playbutton);
-		Button tutButton = (Button) findViewById(R.id.tutbutton);
-		Button myzooButton = (Button) findViewById(R.id.myzoobutton);
+		ImageButton gameButton = (ImageButton) findViewById(R.id.playbutton);
+		ImageButton tutButton = (ImageButton) findViewById(R.id.tutbutton);
+		ImageButton myzooButton = (ImageButton) findViewById(R.id.myzoobutton);
 		//Make buttons invisisble
 		gameButton.setVisibility(View.VISIBLE);
 		gameButton.setBackgroundColor(Color.TRANSPARENT);
