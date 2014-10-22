@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Tuturial extends Activity {
+public class Tuturial extends MainActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

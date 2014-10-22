@@ -15,7 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class Game extends Activity {
+public class Game extends MainActivity {
 
 	private MediaRecorder myRecorder;
 	private MediaPlayer myPlayer;
@@ -56,7 +56,6 @@ public class Game extends Activity {
 				start(v);
 			}
 		});
-
 
 
 	}
