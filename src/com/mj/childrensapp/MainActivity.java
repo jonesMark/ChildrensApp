@@ -9,7 +9,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+/*
+ * SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = settings.edit();
+editor.putString("statepara1", ts);
+editor.commit();
 
+get:
+
+SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);    
+String ret = settings.getString("statepara1", "0");
+
+edit:
+SharedPreferences.Editor mEditor = mPrefs.edit();
+mEditor.putString("tag", value_of_variable).commit();
+ * 
+ * 
+ */
 public class MainActivity extends Activity {
 	
 	public void gotoGame(View view) {
