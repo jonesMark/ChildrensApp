@@ -2,12 +2,13 @@ package com.mj.childrensapp;
 
 import java.io.IOException;
 
-import android.app.Activity;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,7 +57,6 @@ public class Game extends MainActivity {
 				start(v);
 			}
 		});
-
 
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {

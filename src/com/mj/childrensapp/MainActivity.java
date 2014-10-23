@@ -1,28 +1,34 @@
 package com.mj.childrensapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 /*
- * SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
-SharedPreferences.Editor editor = settings.edit();
-editor.putString("statepara1", ts);
-editor.commit();
-
-get:
-
-SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);    
-String ret = settings.getString("statepara1", "0");
-
-edit:
-SharedPreferences.Editor mEditor = mPrefs.edit();
-mEditor.putString("tag", value_of_variable).commit();
+ * This is how to use file saving on the system (using 0 for no, 1 for yes (won that animal):
+ * This can also work for saving any variable necessary (strings and ints are the easiest to use for preferences)
+ *      int tiger = 1;//won the tiger
+ *      //open settings and add the editor
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        SharedPreferences.Editor editor = settings.edit();
+        //animalTiger is the name the value is stored under, tiger is the int itself.
+        editor.putInt("animalTiger", tiger);
+        editor.commit();
+ * 
+ * Clarified--checking a value
+ * 		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());//uses the default app preferences
+		int tiger = settings.getInt("animalTiger", 0);//The name is how it is save, the 0 is defaulted to if no number exists
+		if (tiger == 1) {
+			findViewById(R.id.imageView19).setVisibility(View.INVISIBLE);//just a placeholder
+		}
+		else {}
  * 
  * 
  */
@@ -53,12 +59,13 @@ public class MainActivity extends Activity {
 		ImageButton tutButton = (ImageButton) findViewById(R.id.tutbutton);
 		ImageButton myzooButton = (ImageButton) findViewById(R.id.myzoobutton);
 		//Make buttons invisisble
-		gameButton.setVisibility(View.VISIBLE);
+		//gameButton.setVisibility(View.VISIBLE);
 		gameButton.setBackgroundColor(Color.TRANSPARENT);
-		tutButton.setVisibility(View.VISIBLE);
+		//tutButton.setVisibility(View.VISIBLE);
 		tutButton.setBackgroundColor(Color.TRANSPARENT);
-		myzooButton.setVisibility(View.VISIBLE);
+		//myzooButton.setVisibility(View.VISIBLE);
 		myzooButton.setBackgroundColor(Color.TRANSPARENT);
+
 		//Set click listeners for all buttons
         gameButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -75,7 +82,6 @@ public class MainActivity extends Activity {
             	gotoMyzoo(v);
             }
         });
-		//Next up is the file saving system.  This will open or make the file for the game
 
 	}
 
