@@ -127,7 +127,7 @@ public class Game extends MainActivity {
 			for (int k=0; k<15; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
 			}
-			if (veiwNum > 7 && veiwNum < 12){
+			if (veiwNum > 6 && veiwNum < 11){
 				winNum++;
 				if (winNum ==8){
 					try {

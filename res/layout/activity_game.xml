@@ -179,5 +179,15 @@
          android:layout_marginBottom="10dp"
          android:visibility="invisible"
          android:src="@drawable/game_orangeboxfinal" />
+     
+          <ImageView
+         android:id="@+id/rangbox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/imageView6"
+         android:layout_alignLeft="@+id/imageView6"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="-15dp"
+         android:src="@drawable/game_rangeboxfinal" />
 
 </RelativeLayout>
