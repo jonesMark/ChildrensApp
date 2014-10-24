@@ -25,10 +25,10 @@ public final class R {
         public static final int background_plain=0x7f020000;
         public static final int backgroundwithsideproto=0x7f020001;
         public static final int box=0x7f020002;
-        public static final int bracketproto=0x7f020003;
-        public static final int canyousayproto=0x7f020004;
-        public static final int cowproto=0x7f020005;
-        public static final int cowsaysproto=0x7f020006;
+        public static final int canyousayproto=0x7f020003;
+        public static final int cowproto=0x7f020004;
+        public static final int cowsaysproto=0x7f020005;
+        public static final int game_backgroundfinal=0x7f020006;
         public static final int game_barbackfinal=0x7f020007;
         public static final int game_orangeboxfinal=0x7f020008;
         public static final int game_rangeboxfinal=0x7f020009;
