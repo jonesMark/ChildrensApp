@@ -293,5 +293,16 @@
          android:layout_marginLeft="480dp"
          android:visibility="invisible"
          android:src="@drawable/game_popwinfinal" />
+         
+         <ImageButton
+         android:id="@+id/slidecont"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="340dp"
+         android:layout_marginLeft="180dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_slidecontfinal" />
 
 </RelativeLayout>

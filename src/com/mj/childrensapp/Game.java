@@ -3,6 +3,7 @@ package com.mj.childrensapp;
 import java.io.IOException;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class Game extends MainActivity {
 	//private Button startBtn;
 	private ImageButton imageStop;
 	private ImageButton imageStart;
+	private ImageButton slidecont;
 	private int mInterval = 150; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double multiplier = 1.05; //a little more control added, maybe use for the future.
@@ -66,6 +68,11 @@ public class Game extends MainActivity {
 				stop(v);
 			}
 		});
+		slidecont = (ImageButton)findViewById(R.id.slidecont);
+		slidecont.setEnabled(false);
+		imageStart.setBackgroundColor(Color.TRANSPARENT);
+		imageStop.setBackgroundColor(Color.TRANSPARENT);
+		slidecont.setBackgroundColor(Color.TRANSPARENT);
 
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -191,6 +198,8 @@ public class Game extends MainActivity {
 					findViewById(R.id.popback).setVisibility(View.VISIBLE);
 					findViewById(R.id.popcow).setVisibility(View.VISIBLE);
 					findViewById(R.id.popwin).setVisibility(View.VISIBLE);
+					slidecont.setEnabled(true);
+				    slidecont.setVisibility(View.VISIBLE);
 				}
 			}
 			else{
