@@ -22,7 +22,7 @@ public class Game extends MainActivity {
 	private MediaPlayer myPlayer;
 	private String outputFile = null;
 	//private Button startBtn;
-	//private Button stopBtn;
+	private ImageButton imageStop;
 	private ImageButton imageStart;
 	private int mInterval = 150; //this is the timestep in miliseconds 
 	private Handler mHandler;
@@ -55,6 +55,15 @@ public class Game extends MainActivity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				start(v);
+			}
+		});
+		imageStop = (ImageButton)findViewById(R.id.ImageStop);
+		imageStop.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				stop(v);
 			}
 		});
 
@@ -91,12 +100,37 @@ public class Game extends MainActivity {
 		}
 		// disable start button, enable stop
 		imageStart.setEnabled(false);
-
+		imageStart.setVisibility(View.INVISIBLE);
+		imageStop.setEnabled(true);
+		imageStop.setVisibility(View.VISIBLE);
 		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 		//start the repeating task
 		startRepeatingTask();
 	}
 
+	public void stop(View view){
+		   try {
+		      myRecorder.stop();
+		      myRecorder.release();
+		      myRecorder  = null;
+		      
+		      imageStop.setEnabled(false);
+		      imageStop.setVisibility(View.INVISIBLE);
+		      imageStart.setEnabled(true);
+		      imageStart.setVisibility(View.VISIBLE);
+		      
+		      stopRepeatingTask();
+
+		   } catch (IllegalStateException e) {
+				//  it is called before start()
+				e.printStackTrace();
+		   } catch (RuntimeException e) {
+				// no valid audio/video data has been received
+				e.printStackTrace();
+		   }
+		   outputFile = Environment.getExternalStorageDirectory().
+					getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+	   }
 
 	
 	private double getAmplitude() {

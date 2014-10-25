@@ -18,8 +18,17 @@
             android:id="@+id/ImageStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:src="@drawable/gamestartbuttonproto" />
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/game_startfinal" />
+        <ImageButton
+            android:id="@+id/ImageStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            android:src="@drawable/game_pausefinal" />
 
     </LinearLayout>
 
