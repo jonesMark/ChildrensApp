@@ -208,5 +208,46 @@
          android:layout_marginBottom="10dp"
          android:layout_marginLeft="-15dp"
          android:src="@drawable/game_rangeboxfinal" />
+          
+         <ImageView
+         android:id="@+id/soundkeep"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/imageView6"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="70dp"
+         android:layout_marginLeft="75dp"
+         android:src="@drawable/game_keeperfinal" />
+         
+         <ImageView
+         android:id="@+id/acowsays"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="70dp"
+         android:layout_marginLeft="310dp"
+         android:src="@drawable/game_cowsaysfinal" />
+         
+         <ImageView
+         android:id="@+id/canyousay"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="150dp"
+         android:layout_marginLeft="310dp"
+         android:src="@drawable/game_canyousayfinal" />
+         
+         <ImageView
+         android:id="@+id/gamecow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="70dp"
+         android:layout_marginLeft="355dp"
+         android:src="@drawable/game_cowfinal" />
 
 </RelativeLayout>
