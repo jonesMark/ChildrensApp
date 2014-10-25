@@ -43,12 +43,6 @@
     </LinearLayout>
 
 
-     <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-                android:visibility="invisible"
-        android:src="@drawable/winproto" />
 
      <ImageView
          android:id="@+id/soundbarback"
@@ -200,13 +194,25 @@
          android:src="@drawable/game_orangeboxfinal" />
      
           <ImageView
-         android:id="@+id/rangbox"
+         android:id="@+id/rangboxcow"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_above="@+id/imageView6"
          android:layout_alignLeft="@+id/imageView6"
          android:layout_marginBottom="10dp"
          android:layout_marginLeft="-15dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_rangeboxfinal" />
+          
+         <ImageView
+         android:id="@+id/rangboxtiger"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/imageView10"
+         android:layout_alignLeft="@+id/imageView6"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="-15dp"
+         android:visibility="invisible"
          android:src="@drawable/game_rangeboxfinal" />
           
          <ImageView
@@ -228,7 +234,19 @@
          android:layout_alignParentTop="true"
          android:layout_marginTop="70dp"
          android:layout_marginLeft="310dp"
+         android:visibility="invisible"
          android:src="@drawable/game_cowsaysfinal" />
+         
+         <ImageView
+         android:id="@+id/atigersays"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="70dp"
+         android:layout_marginLeft="310dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_tigersaysfinal" />
          
          <ImageView
          android:id="@+id/canyousay"
@@ -248,7 +266,19 @@
          android:layout_alignParentBottom="true"
          android:layout_marginBottom="70dp"
          android:layout_marginLeft="355dp"
+         android:visibility="invisible"
          android:src="@drawable/game_cowfinal" />
+         
+         <ImageView
+         android:id="@+id/gametiger"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="70dp"
+         android:layout_marginLeft="365dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_tigerfinal" />
          
          <ImageView
          android:id="@+id/popblueback"
@@ -274,6 +304,17 @@
          
          <ImageView
          android:id="@+id/popcow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="120dp"
+         android:layout_marginLeft="190dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_popcowfinal" />
+         
+         <ImageView
+         android:id="@+id/poptiger"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignParentLeft="true"

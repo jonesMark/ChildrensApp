@@ -2,6 +2,8 @@ package com.mj.childrensapp;
 
 import java.io.IOException;
 
+import java.util.Random;
+
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -32,6 +34,10 @@ public class Game extends MainActivity {
 	private double ampNum = 0;
 	private double veiwNum = 0;
 	private int winNum = 0; //counts how long they're in the winning range
+	private int animalVal = 0;
+	private int ampMin;
+	private int ampMax;
+	Random random = new Random();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +55,22 @@ public class Game extends MainActivity {
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
-
+		
+		animalVal = setAnimal(animalVal);
+		if(animalVal ==1){
+			findViewById(R.id.acowsays).setVisibility(View.VISIBLE);
+			findViewById(R.id.gamecow).setVisibility(View.VISIBLE);
+			findViewById(R.id.rangboxcow).setVisibility(View.VISIBLE);
+			ampMin =6;
+			ampMax =11;
+		}
+		else if(animalVal == 2){
+			findViewById(R.id.atigersays).setVisibility(View.VISIBLE);
+			findViewById(R.id.gametiger).setVisibility(View.VISIBLE);
+			findViewById(R.id.rangboxtiger).setVisibility(View.VISIBLE);
+			ampMin =10;
+			ampMax =15;
+		}
 		imageStart = (ImageButton)findViewById(R.id.ImageStart);
 		imageStart.setOnClickListener(new OnClickListener() {
 
@@ -69,6 +90,14 @@ public class Game extends MainActivity {
 			}
 		});
 		slidecont = (ImageButton)findViewById(R.id.slidecont);
+		slidecont.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				cont(v);
+			}
+		});
 		slidecont.setEnabled(false);
 		imageStart.setBackgroundColor(Color.TRANSPARENT);
 		imageStop.setBackgroundColor(Color.TRANSPARENT);
@@ -145,6 +174,54 @@ public class Game extends MainActivity {
 		   myRecorder.setOutputFile(outputFile);
 		   mHandler = new Handler();
 	   }
+	
+	public void cont(View view){
+		animalVal = setAnimal(animalVal);
+		if(animalVal ==1){
+			findViewById(R.id.atigersays).setVisibility(View.INVISIBLE);
+			findViewById(R.id.gametiger).setVisibility(View.INVISIBLE);
+			findViewById(R.id.rangboxtiger).setVisibility(View.INVISIBLE);
+			findViewById(R.id.acowsays).setVisibility(View.VISIBLE);
+			findViewById(R.id.gamecow).setVisibility(View.VISIBLE);
+			findViewById(R.id.rangboxcow).setVisibility(View.VISIBLE);
+			ampMin =6;
+			ampMax =11;
+		}
+		else if(animalVal == 2){
+			findViewById(R.id.acowsays).setVisibility(View.INVISIBLE);
+			findViewById(R.id.gamecow).setVisibility(View.INVISIBLE);
+			findViewById(R.id.rangboxcow).setVisibility(View.INVISIBLE);
+			findViewById(R.id.atigersays).setVisibility(View.VISIBLE);
+			findViewById(R.id.gametiger).setVisibility(View.VISIBLE);
+			findViewById(R.id.rangboxtiger).setVisibility(View.VISIBLE);
+			ampMin =10;
+			ampMax =15;
+		}
+		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
+		slidecont.setEnabled(false);
+	    slidecont.setVisibility(View.INVISIBLE);
+	    
+	    imageStop.setEnabled(false);
+	    imageStop.setVisibility(View.INVISIBLE);
+	    imageStart.setEnabled(true);
+	    imageStart.setVisibility(View.VISIBLE);
+	    
+	    ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
+	    for (int k=0; k<15; k++) {
+			soundBar[k].setVisibility(View.INVISIBLE);
+		}
+		
+	    myRecorder = new MediaRecorder();
+		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		   myRecorder.setOutputFile(outputFile);
+		   mHandler = new Handler();
+		
+	}
 
 	
 	private double getAmplitude() {
@@ -175,7 +252,7 @@ public class Game extends MainActivity {
 			for (int k=0; k<15; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
 			}
-			if (veiwNum > 6 && veiwNum < 11){
+			if (veiwNum > ampMin && veiwNum < ampMax){
 				winNum++;
 				if (winNum ==8){
 					try {
@@ -221,6 +298,14 @@ public class Game extends MainActivity {
 
 	void stopRepeatingTask() {
 		mHandler.removeCallbacks(mStatusChecker);
+	}
+	
+	private int setAnimal(int current){
+		int ran = current;
+		while (ran == current){
+		ran = random.nextInt(2)+1;
+		}
+		return ran;
 	}
 
 }
