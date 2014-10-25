@@ -28,6 +28,7 @@ public class Game extends MainActivity {
 	private ImageButton imageStop;
 	private ImageButton imageStart;
 	private ImageButton slidecont;
+	private ImageButton slideagain;
 	private int mInterval = 150; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double multiplier = 1.05; //a little more control added, maybe use for the future.
@@ -37,6 +38,8 @@ public class Game extends MainActivity {
 	private int animalVal = 0;
 	private int ampMin;
 	private int ampMax;
+	int timeleftmaster = 100;
+	int timeleft;
 	Random random = new Random();
 	
 	@Override
@@ -98,6 +101,15 @@ public class Game extends MainActivity {
 				cont(v);
 			}
 		});
+		slideagain = (ImageButton)findViewById(R.id.slidetryagain);
+		slideagain.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				again(v);
+			}
+		});
 		slidecont.setEnabled(false);
 		imageStart.setBackgroundColor(Color.TRANSPARENT);
 		imageStop.setBackgroundColor(Color.TRANSPARENT);
@@ -141,6 +153,7 @@ public class Game extends MainActivity {
 		imageStop.setVisibility(View.VISIBLE);
 		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
 		//start the repeating task
+		timeleft = timeleftmaster;
 		startRepeatingTask();
 	}
 
@@ -222,6 +235,34 @@ public class Game extends MainActivity {
 		   mHandler = new Handler();
 		
 	}
+	public void again(View view){
+		
+		
+		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
+		findViewById(R.id.poptime).setVisibility(View.INVISIBLE);
+		slideagain.setEnabled(false);
+	    slideagain.setVisibility(View.INVISIBLE);
+	    
+	    imageStop.setEnabled(false);
+	    imageStop.setVisibility(View.INVISIBLE);
+	    imageStart.setEnabled(true);
+	    imageStart.setVisibility(View.VISIBLE);
+	    
+	    ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
+	    for (int k=0; k<15; k++) {
+			soundBar[k].setVisibility(View.INVISIBLE);
+		}
+		
+	    myRecorder = new MediaRecorder();
+		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		   myRecorder.setOutputFile(outputFile);
+		   mHandler = new Handler();
+		
+	}
 
 	
 	private double getAmplitude() {
@@ -254,7 +295,7 @@ public class Game extends MainActivity {
 			}
 			if (veiwNum > ampMin && veiwNum < ampMax){
 				winNum++;
-				if (winNum ==8){
+				if (winNum ==10){
 					try {
 						myRecorder.stop();
 						myRecorder.release();
@@ -278,9 +319,35 @@ public class Game extends MainActivity {
 					slidecont.setEnabled(true);
 				    slidecont.setVisibility(View.VISIBLE);
 				}
+				
 			}
 			else{
+				timeleft--;
 				winNum =0;
+			}
+			if (timeleft <= 0){
+				try {
+					myRecorder.stop();
+					myRecorder.release();
+					myRecorder  = null;
+
+					//text.setText("Recording Point: Stop recording");
+					stopRepeatingTask();
+				} catch (IllegalStateException e) {
+					//  it is called before start()
+					e.printStackTrace();
+				} catch (RuntimeException e) {
+					// no valid audio/video data has been received
+					e.printStackTrace();
+				}
+				outputFile = Environment.getExternalStorageDirectory().
+						getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+				findViewById(R.id.popblueback).setVisibility(View.VISIBLE);
+				findViewById(R.id.popback).setVisibility(View.VISIBLE);
+				findViewById(R.id.popcow).setVisibility(View.VISIBLE);
+				findViewById(R.id.poptime).setVisibility(View.VISIBLE);
+				slideagain.setEnabled(true);
+			    slideagain.setVisibility(View.VISIBLE);
 			}
 			//make the bars visible based on the amp.
 			while (veiwNum >0){

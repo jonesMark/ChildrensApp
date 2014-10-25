@@ -335,6 +335,17 @@
          android:visibility="invisible"
          android:src="@drawable/game_popwinfinal" />
          
+         <ImageView
+         android:id="@+id/poptime"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="115dp"
+         android:layout_marginLeft="480dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_timeupfinal" />
+         
          <ImageButton
          android:id="@+id/slidecont"
          android:layout_width="wrap_content"
@@ -345,5 +356,16 @@
          android:layout_marginLeft="180dp"
          android:visibility="invisible"
          android:src="@drawable/game_slidecontfinal" />
+         
+         <ImageButton
+         android:id="@+id/slidetryagain"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="340dp"
+         android:layout_marginLeft="180dp"
+         android:visibility="invisible"
+         android:src="@drawable/game_tryagainfinal" />
 
 </RelativeLayout>
