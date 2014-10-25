@@ -222,9 +222,20 @@
          android:layout_above="@+id/imageView6"
          android:layout_alignParentLeft="true"
          android:layout_alignParentBottom="true"
-         android:layout_marginBottom="70dp"
+         android:layout_marginBottom="230dp"
          android:layout_marginLeft="75dp"
          android:src="@drawable/game_soundkeeperfinal" />
+         
+         <ImageButton
+         android:id="@+id/exit"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/imageView6"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="60dp"
+         android:layout_marginLeft="62dp"
+         android:src="@drawable/game_exitfinal" />
          
          <ImageView
          android:id="@+id/acowsays"

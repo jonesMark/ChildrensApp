@@ -1,9 +1,9 @@
 package com.mj.childrensapp;
 
 import java.io.IOException;
-
 import java.util.Random;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -29,6 +29,7 @@ public class Game extends MainActivity {
 	private ImageButton imageStart;
 	private ImageButton slidecont;
 	private ImageButton slideagain;
+	private ImageButton exitbtn;
 	private int mInterval = 150; //this is the timestep in miliseconds 
 	private Handler mHandler;
 	private double multiplier = 1.05; //a little more control added, maybe use for the future.
@@ -110,11 +111,22 @@ public class Game extends MainActivity {
 				again(v);
 			}
 		});
+		exitbtn = (ImageButton)findViewById(R.id.exit);
+		exitbtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				exit(v);
+			}
+		});
 		slidecont.setEnabled(false);
+		slideagain.setEnabled(false);
 		imageStart.setBackgroundColor(Color.TRANSPARENT);
 		imageStop.setBackgroundColor(Color.TRANSPARENT);
 		slidecont.setBackgroundColor(Color.TRANSPARENT);
 		slideagain.setBackgroundColor(Color.TRANSPARENT);
+		exitbtn.setBackgroundColor(Color.TRANSPARENT);
 
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -217,6 +229,7 @@ public class Game extends MainActivity {
 		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
 		slidecont.setEnabled(false);
+		exitbtn.setEnabled(true);
 	    slidecont.setVisibility(View.INVISIBLE);
 	    
 	    imageStop.setEnabled(false);
@@ -246,6 +259,7 @@ public class Game extends MainActivity {
 		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
 		findViewById(R.id.poptime).setVisibility(View.INVISIBLE);
 		slideagain.setEnabled(false);
+		exitbtn.setEnabled(true);
 	    slideagain.setVisibility(View.INVISIBLE);
 	    
 	    imageStop.setEnabled(false);
@@ -267,6 +281,11 @@ public class Game extends MainActivity {
 		
 	}
 
+	public void exit(View view){
+		stop(view);
+		Intent intent = new Intent (this, MainActivity.class);
+		startActivity(intent);
+	}
 	
 	private double getAmplitude() {
 		if (myRecorder != null) {
@@ -325,6 +344,7 @@ public class Game extends MainActivity {
 						findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
 					}
 					slidecont.setEnabled(true);
+					exitbtn.setEnabled(false);
 				    slidecont.setVisibility(View.VISIBLE);
 				}
 				
@@ -360,6 +380,7 @@ public class Game extends MainActivity {
 					findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
 				}
 				slideagain.setEnabled(true);
+				exitbtn.setEnabled(false);
 			    slideagain.setVisibility(View.VISIBLE);
 			}
 			//make the bars visible based on the amp.
