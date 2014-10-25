@@ -187,7 +187,10 @@ public class Game extends MainActivity {
 					}
 					outputFile = Environment.getExternalStorageDirectory().
 							getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-					findViewById(R.id.imageView21).setVisibility(View.VISIBLE);
+					findViewById(R.id.popblueback).setVisibility(View.VISIBLE);
+					findViewById(R.id.popback).setVisibility(View.VISIBLE);
+					findViewById(R.id.popcow).setVisibility(View.VISIBLE);
+					findViewById(R.id.popwin).setVisibility(View.VISIBLE);
 				}
 			}
 			else{
