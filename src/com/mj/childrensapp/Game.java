@@ -130,6 +130,13 @@ public class Game extends MainActivity {
 		   }
 		   outputFile = Environment.getExternalStorageDirectory().
 					getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+		   
+		   myRecorder = new MediaRecorder();
+		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		   myRecorder.setOutputFile(outputFile);
+		   mHandler = new Handler();
 	   }
 
 	

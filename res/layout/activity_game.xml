@@ -21,7 +21,17 @@
             android:layout_marginLeft="65dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/game_startfinal" />
-        <ImageButton
+
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+        
+                    <ImageButton
             android:id="@+id/ImageStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
