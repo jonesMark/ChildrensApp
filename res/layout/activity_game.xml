@@ -224,7 +224,7 @@
          android:layout_alignParentBottom="true"
          android:layout_marginBottom="70dp"
          android:layout_marginLeft="75dp"
-         android:src="@drawable/game_keeperfinal" />
+         android:src="@drawable/game_soundkeeperfinal" />
          
          <ImageView
          android:id="@+id/acowsays"
@@ -319,10 +319,10 @@
          android:layout_height="wrap_content"
          android:layout_alignParentLeft="true"
          android:layout_alignParentTop="true"
-         android:layout_marginTop="120dp"
+         android:layout_marginTop="100dp"
          android:layout_marginLeft="190dp"
          android:visibility="invisible"
-         android:src="@drawable/game_popcowfinal" />
+         android:src="@drawable/game_poptigerfinal" />
          
          <ImageView
          android:id="@+id/popwin"

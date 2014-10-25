@@ -114,6 +114,7 @@ public class Game extends MainActivity {
 		imageStart.setBackgroundColor(Color.TRANSPARENT);
 		imageStop.setBackgroundColor(Color.TRANSPARENT);
 		slidecont.setBackgroundColor(Color.TRANSPARENT);
+		slideagain.setBackgroundColor(Color.TRANSPARENT);
 
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -213,6 +214,7 @@ public class Game extends MainActivity {
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
+		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
 		slidecont.setEnabled(false);
 	    slidecont.setVisibility(View.INVISIBLE);
@@ -241,6 +243,7 @@ public class Game extends MainActivity {
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
+		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
 		findViewById(R.id.poptime).setVisibility(View.INVISIBLE);
 		slideagain.setEnabled(false);
 	    slideagain.setVisibility(View.INVISIBLE);
@@ -314,8 +317,13 @@ public class Game extends MainActivity {
 							getAbsolutePath() + "/javacodegeeksRecording.3gpp";
 					findViewById(R.id.popblueback).setVisibility(View.VISIBLE);
 					findViewById(R.id.popback).setVisibility(View.VISIBLE);
-					findViewById(R.id.popcow).setVisibility(View.VISIBLE);
 					findViewById(R.id.popwin).setVisibility(View.VISIBLE);
+					if (animalVal == 1){
+						findViewById(R.id.popcow).setVisibility(View.VISIBLE);
+					}
+					if (animalVal == 2){
+						findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
+					}
 					slidecont.setEnabled(true);
 				    slidecont.setVisibility(View.VISIBLE);
 				}
@@ -344,8 +352,13 @@ public class Game extends MainActivity {
 						getAbsolutePath() + "/javacodegeeksRecording.3gpp";
 				findViewById(R.id.popblueback).setVisibility(View.VISIBLE);
 				findViewById(R.id.popback).setVisibility(View.VISIBLE);
-				findViewById(R.id.popcow).setVisibility(View.VISIBLE);
 				findViewById(R.id.poptime).setVisibility(View.VISIBLE);
+				if (animalVal == 1){
+					findViewById(R.id.popcow).setVisibility(View.VISIBLE);
+				}
+				if (animalVal == 2){
+					findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
+				}
 				slideagain.setEnabled(true);
 			    slideagain.setVisibility(View.VISIBLE);
 			}
