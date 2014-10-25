@@ -346,6 +346,8 @@ public class Game extends MainActivity {
 					slidecont.setEnabled(true);
 					exitbtn.setEnabled(false);
 				    slidecont.setVisibility(View.VISIBLE);
+				    
+				    //Put in data saving here for Myzoo remembering.
 				}
 				
 			}
