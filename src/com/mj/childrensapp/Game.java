@@ -42,7 +42,7 @@ public class Game extends MainActivity {
 	int timeleftmaster = 100;
 	int timeleft;
 	Random random = new Random();
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,7 +59,7 @@ public class Game extends MainActivity {
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
-		
+
 		animalVal = setAnimal(animalVal);
 		if(animalVal ==1){
 			findViewById(R.id.acowsays).setVisibility(View.VISIBLE);
@@ -171,36 +171,36 @@ public class Game extends MainActivity {
 	}
 
 	public void stop(View view){
-		   try {
-		      myRecorder.stop();
-		      myRecorder.release();
-		      myRecorder  = null;
-		      
-		      imageStop.setEnabled(false);
-		      imageStop.setVisibility(View.INVISIBLE);
-		      imageStart.setEnabled(true);
-		      imageStart.setVisibility(View.VISIBLE);
-		      
-		      stopRepeatingTask();
+		try {
+			myRecorder.stop();
+			myRecorder.release();
+			myRecorder  = null;
 
-		   } catch (IllegalStateException e) {
-				//  it is called before start()
-				e.printStackTrace();
-		   } catch (RuntimeException e) {
-				// no valid audio/video data has been received
-				e.printStackTrace();
-		   }
-		   outputFile = Environment.getExternalStorageDirectory().
-					getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-		   
-		   myRecorder = new MediaRecorder();
-		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-		   myRecorder.setOutputFile(outputFile);
-		   mHandler = new Handler();
-	   }
-	
+			imageStop.setEnabled(false);
+			imageStop.setVisibility(View.INVISIBLE);
+			imageStart.setEnabled(true);
+			imageStart.setVisibility(View.VISIBLE);
+
+			stopRepeatingTask();
+
+		} catch (IllegalStateException e) {
+			//  it is called before start()
+			e.printStackTrace();
+		} catch (RuntimeException e) {
+			// no valid audio/video data has been received
+			e.printStackTrace();
+		}
+		outputFile = Environment.getExternalStorageDirectory().
+				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
+
+		myRecorder = new MediaRecorder();
+		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		myRecorder.setOutputFile(outputFile);
+		mHandler = new Handler();
+	}
+
 	public void cont(View view){
 		animalVal = setAnimal(animalVal);
 		if(animalVal ==1){
@@ -230,29 +230,29 @@ public class Game extends MainActivity {
 		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
 		slidecont.setEnabled(false);
 		exitbtn.setEnabled(true);
-	    slidecont.setVisibility(View.INVISIBLE);
-	    
-	    imageStop.setEnabled(false);
-	    imageStop.setVisibility(View.INVISIBLE);
-	    imageStart.setEnabled(true);
-	    imageStart.setVisibility(View.VISIBLE);
-	    
-	    ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
-	    for (int k=0; k<15; k++) {
+		slidecont.setVisibility(View.INVISIBLE);
+
+		imageStop.setEnabled(false);
+		imageStop.setVisibility(View.INVISIBLE);
+		imageStart.setEnabled(true);
+		imageStart.setVisibility(View.VISIBLE);
+
+		ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
+		for (int k=0; k<15; k++) {
 			soundBar[k].setVisibility(View.INVISIBLE);
 		}
-		
-	    myRecorder = new MediaRecorder();
-		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-		   myRecorder.setOutputFile(outputFile);
-		   mHandler = new Handler();
-		
+
+		myRecorder = new MediaRecorder();
+		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		myRecorder.setOutputFile(outputFile);
+		mHandler = new Handler();
+
 	}
 	public void again(View view){
-		
-		
+
+
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
@@ -260,25 +260,25 @@ public class Game extends MainActivity {
 		findViewById(R.id.poptime).setVisibility(View.INVISIBLE);
 		slideagain.setEnabled(false);
 		exitbtn.setEnabled(true);
-	    slideagain.setVisibility(View.INVISIBLE);
-	    
-	    imageStop.setEnabled(false);
-	    imageStop.setVisibility(View.INVISIBLE);
-	    imageStart.setEnabled(true);
-	    imageStart.setVisibility(View.VISIBLE);
-	    
-	    ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
-	    for (int k=0; k<15; k++) {
+		slideagain.setVisibility(View.INVISIBLE);
+
+		imageStop.setEnabled(false);
+		imageStop.setVisibility(View.INVISIBLE);
+		imageStart.setEnabled(true);
+		imageStart.setVisibility(View.VISIBLE);
+
+		ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
+		for (int k=0; k<15; k++) {
 			soundBar[k].setVisibility(View.INVISIBLE);
 		}
-		
-	    myRecorder = new MediaRecorder();
-		   myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		   myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-		   myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-		   myRecorder.setOutputFile(outputFile);
-		   mHandler = new Handler();
-		
+
+		myRecorder = new MediaRecorder();
+		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+		myRecorder.setOutputFile(outputFile);
+		mHandler = new Handler();
+
 	}
 
 	public void exit(View view){
@@ -286,7 +286,7 @@ public class Game extends MainActivity {
 		Intent intent = new Intent (this, MainActivity.class);
 		startActivity(intent);
 	}
-	
+
 	private double getAmplitude() {
 		if (myRecorder != null) {
 			double m = myRecorder.getMaxAmplitude();
@@ -339,17 +339,34 @@ public class Game extends MainActivity {
 					findViewById(R.id.popwin).setVisibility(View.VISIBLE);
 					if (animalVal == 1){
 						findViewById(R.id.popcow).setVisibility(View.VISIBLE);
+						//This is saving the file system for the cow, so MyZoo remembers it.
+						int cow = 1;//won the cow
+						//open settings and add the editor
+						SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+						SharedPreferences.Editor editor = settings.edit();
+						//animalTiger is the name the value is stored under, tiger is the int itself.
+						editor.putInt("Cow", cow);
+						editor.commit();
 					}
 					if (animalVal == 2){
 						findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
+						//This is saving the file system for the cow, so MyZoo remembers it.
+						int tiger = 1;//won the cow
+						//open settings and add the editor
+						SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+						SharedPreferences.Editor editor = settings.edit();
+						//animalTiger is the name the value is stored under, tiger is the int itself.
+						editor.putInt("Tiger", tiger);
+						editor.commit();
+
 					}
 					slidecont.setEnabled(true);
 					exitbtn.setEnabled(false);
-				    slidecont.setVisibility(View.VISIBLE);
-				    
-				    //Put in data saving here for Myzoo remembering.
+					slidecont.setVisibility(View.VISIBLE);
+
+					//Put in data saving here for Myzoo remembering.
 				}
-				
+
 			}
 			else{
 				timeleft--;
@@ -383,14 +400,14 @@ public class Game extends MainActivity {
 				}
 				slideagain.setEnabled(true);
 				exitbtn.setEnabled(false);
-			    slideagain.setVisibility(View.VISIBLE);
+				slideagain.setVisibility(View.VISIBLE);
 			}
 			//make the bars visible based on the amp.
 			while (veiwNum >0){
 				soundBar[i].setVisibility(View.VISIBLE);
 				i++;
 				veiwNum--;
-				
+
 			}
 		}
 	};
@@ -402,11 +419,11 @@ public class Game extends MainActivity {
 	void stopRepeatingTask() {
 		mHandler.removeCallbacks(mStatusChecker);
 	}
-	
+
 	private int setAnimal(int current){
 		int ran = current;
 		while (ran == current){
-		ran = random.nextInt(2)+1;
+			ran = random.nextInt(2)+1;
 		}
 		return ran;
 	}
