@@ -8,6 +8,7 @@ import android.view.MenuItem;
 public class MyZoo extends MainActivity {
 	//Saved animals are "Cow" and "Tiger" so far.
 	private int cyclenum = 0;
+	private int lastnum = 0;
 	private boolean tiger = false;
 	private boolean cow = false;
 	SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());//uses the default app preferences
@@ -23,6 +24,9 @@ public class MyZoo extends MainActivity {
 		if (settings.getInt("Cow", 0) ==1 ) {
 			cow = true;
 		}
+		//Rub the initial buttonClick to have an animal showing or the default screen.
+		buttonClick();
+		
 
 	}
 
@@ -49,6 +53,7 @@ public class MyZoo extends MainActivity {
 		//1 = tiger
 		//2 = ?
 		//3 = ?
+		//Must turn off initial 
 		switch (cyclenum) {
 		case 0: //make cow invisible
 			break;
@@ -65,6 +70,7 @@ public class MyZoo extends MainActivity {
 		if (cow || tiger || cow || tiger) {
 			//no animals default screen, prevents infinite loops
 		}
+		else
 		{
 			//master switch statement, allows for cycling through images.
 			while (keepgoing) {
@@ -104,5 +110,7 @@ public class MyZoo extends MainActivity {
 				}
 			}
 		}
+		//this allows for the back button to work
+		lastnum = cyclenum;
 	}
 }
