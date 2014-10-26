@@ -111,11 +111,11 @@ public final class R {
         public static final int linear3=0x7f080002;
         public static final int linearLayout1=0x7f08002d;
         public static final int myzoobutton=0x7f080027;
-        public static final int myzoocow=0x7f08002c;
+        public static final int myzoocow=0x7f08002b;
         public static final int myzoohome=0x7f080028;
-        public static final int myzooleft=0x7f080029;
-        public static final int myzooright=0x7f08002a;
-        public static final int myzootiger=0x7f08002b;
+        public static final int myzooleft=0x7f08002c;
+        public static final int myzooright=0x7f080029;
+        public static final int myzootiger=0x7f08002a;
         public static final int playbutton=0x7f080025;
         public static final int popback=0x7f08001e;
         public static final int popblueback=0x7f08001d;

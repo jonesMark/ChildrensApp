@@ -8,23 +8,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:src="@drawable/myzoo_homefinal" />
-
-    <ImageView
-        android:id="@+id/myzooleft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView1"
-        android:layout_marginBottom="83dp"
-        android:layout_toLeftOf="@+id/imageView2"
-        android:src="@drawable/myzoo_leftarrowfinal" />
 
     <ImageView
         android:id="@+id/myzooright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView3"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="32dp"
         android:src="@drawable/myzoo_rightarrowfinal" />
@@ -63,5 +55,13 @@
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/imageView5"
         android:src="@drawable/myzoo_keeperfinal" />
+
+    <ImageView
+        android:id="@+id/myzooleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:src="@drawable/myzoo_leftarrowfinal" />
     
 </RelativeLayout>
