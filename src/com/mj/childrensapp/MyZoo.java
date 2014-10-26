@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 public class MyZoo extends MainActivity {
 	//Saved animals are "Cow" and "Tiger" so far.
-	private int cyclenum = 0;
+	private int cyclenum = -1;
 	private int lastnum = 0;
 	private boolean tiger = false;
 	private boolean cow = false;
@@ -102,11 +102,29 @@ public class MyZoo extends MainActivity {
 			break;
 		default:  //do nothing, nothing is visible
 		}
-		cyclenum++;
+		lastnum = cyclenum;//save the previous animal
+		if (goBack) {
+			cyclenum --;
+			if (cyclenum == -1) {//this makes sure all animals are correct.  In the final version, I will likely put a switch in its place inside of the if (cow || tiger...s
+				//put two others before these
+				if (tiger) {
+					lastnum = 1;
+				}
+				else if (cow) {
+					lastnum = 0;
+				}
+			}
+			else {
+				lastnum = cyclenum;
+			}
+		}
+		else {
+			cyclenum++;
+		}
 		boolean keepgoing = true;
 		if (cow || tiger || cow || tiger) {
 			//must have at least one animal to work right.
-			
+
 
 			//master switch statement, allows for cycling through images.
 			if (goBack) {
@@ -154,10 +172,9 @@ public class MyZoo extends MainActivity {
 		}
 		else {
 			//no animals default screen, prevents infinite loops
-			
+
 		}	
 
 		//this allows for the back button to work
-		lastnum = cyclenum;
 	}
 }

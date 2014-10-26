@@ -132,8 +132,8 @@ public final class R {
         public static final int soundbarback=0x7f080004;
         public static final int soundkeep=0x7f080016;
         public static final int tutbutton=0x7f080026;
-        public static final int tutleft=0x7f08002d;
-        public static final int tutright=0x7f08002e;
+        public static final int tutleft=0x7f08002e;
+        public static final int tutright=0x7f08002d;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;
