@@ -1,18 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/myzoo_backgroundfinal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/myzoo_backgroundfinal" >
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_toLeftOf="@+id/imageView5"
-        android:src="@drawable/myzoo_keeperfinal" />
-
-    <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/myzoohome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -20,7 +12,7 @@
         android:src="@drawable/myzoo_homefinal" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/myzooleft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView1"
@@ -29,7 +21,7 @@
         android:src="@drawable/myzoo_leftarrowfinal" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/myzooright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView3"
@@ -41,9 +33,35 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
+        android:layout_centerVertical="true"
         android:src="@drawable/myzoo_behindanimalfnial" />
 
+    <ImageButton
+        android:id="@+id/myzootiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/myzoo_tigerfinal"
+        android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/myzoocow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/myzoo_cowfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageView5"
+        android:src="@drawable/myzoo_keeperfinal" />
+    
 </RelativeLayout>

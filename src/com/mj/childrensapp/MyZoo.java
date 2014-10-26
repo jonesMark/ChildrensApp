@@ -1,16 +1,22 @@
 package com.mj.childrensapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 public class MyZoo extends MainActivity {
 	//Saved animals are "Cow" and "Tiger" so far.
 	private int cyclenum = 0;
 	private int lastnum = 0;
 	private boolean tiger = false;
 	private boolean cow = false;
+	private boolean goBack = false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,8 +31,32 @@ public class MyZoo extends MainActivity {
 		}
 		//run the initial buttonClick to have an animal showing or the default screen.
 		buttonClick();
-		
+		ImageView leftButton = (ImageView)findViewById(R.id.myzooleft);
+		//Setting left and right click buttons
+		leftButton.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				goBack = true;
+				buttonClick();
+			}
+		});
+		ImageView rightButton = (ImageView)findViewById(R.id.myzooright);
+		rightButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				buttonClick();
+			}
+		});
+		//setting home button
+		ImageView homeButton = (ImageView)findViewById(R.id.myzoohome);
+		homeButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				gotoHome(v);
+			}
+		});
 	}
 
 	@Override
@@ -47,6 +77,12 @@ public class MyZoo extends MainActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	public void gotoHome(View view) {
+		//Sends user to "my zoo" screen
+		Intent intent = new Intent (this, MainActivity.class);
+		startActivity(intent);
+	}
+
 	private void buttonClick() {
 		//0 = cow 
 		//1 = tiger
@@ -55,8 +91,10 @@ public class MyZoo extends MainActivity {
 		//Must turn off initial 
 		switch (cyclenum) {
 		case 0: //make cow invisible
+			findViewById(R.id.myzoocow).setVisibility(View.INVISIBLE);
 			break;
 		case 1: //make tiger invisible
+			findViewById(R.id.myzootiger).setVisibility(View.INVISIBLE);
 			break;
 		case 2: //make ?? invisible
 			break;
@@ -66,18 +104,21 @@ public class MyZoo extends MainActivity {
 		}
 		cyclenum++;
 		boolean keepgoing = true;
-		if (!cow || !tiger || !cow || !tiger) {
-			//no animals default screen, prevents infinite loops
+		if (cow || tiger || cow || tiger) {
+			//must have at least one animal to work right.
 			
-		}
-		else
-		{
+
 			//master switch statement, allows for cycling through images.
+			if (goBack) {
+				cyclenum=lastnum;
+				goBack=false;
+			}
 			while (keepgoing) {
 				switch (cyclenum)  {
 				case 0: if (cow) {
 					keepgoing=false;
 					//make cow visible
+					findViewById(R.id.myzoocow).setVisibility(View.VISIBLE);
 				}
 				else { 	
 					cyclenum ++;
@@ -86,19 +127,20 @@ public class MyZoo extends MainActivity {
 				case 1: if (tiger) {
 					keepgoing=false;
 					//make tiger visible
+					findViewById(R.id.myzootiger).setVisibility(View.VISIBLE);
 				}
 				else { 	
 					cyclenum++;
 				}
 				break;
-				case 2: if (cow) {
+				case 2: if (false) {//put in new image for these
 					keepgoing=false;
 				}
 				else { 	
 					cyclenum++;
 				}
 				break;
-				case 3: if (cow) {
+				case 3: if (false) {
 					keepgoing=false;
 				}
 				else { 	
@@ -110,6 +152,11 @@ public class MyZoo extends MainActivity {
 				}
 			}
 		}
+		else {
+			//no animals default screen, prevents infinite loops
+			
+		}	
+
 		//this allows for the back button to work
 		lastnum = cyclenum;
 	}
