@@ -65,10 +65,18 @@ public final class R {
         public static final int mkfinal7=0x7f020028;
         public static final int mkfinal8=0x7f020029;
         public static final int mkfinal9=0x7f02002a;
-        public static final int myzoofinal=0x7f02002b;
-        public static final int playbuttonfinal=0x7f02002c;
-        public static final int tutbuttonfinal=0x7f02002d;
-        public static final int winproto=0x7f02002e;
+        public static final int myzoo_backgroundfinal=0x7f02002b;
+        public static final int myzoo_behindanimalfnial=0x7f02002c;
+        public static final int myzoo_cowfinal=0x7f02002d;
+        public static final int myzoo_homefinal=0x7f02002e;
+        public static final int myzoo_keeperfinal=0x7f02002f;
+        public static final int myzoo_leftarrowfinal=0x7f020030;
+        public static final int myzoo_rightarrowfinal=0x7f020031;
+        public static final int myzoo_tigerfinal=0x7f020032;
+        public static final int myzoofinal=0x7f020033;
+        public static final int playbuttonfinal=0x7f020034;
+        public static final int tutbuttonfinal=0x7f020035;
+        public static final int winproto=0x7f020036;
     }
     public static final class id {
         public static final int ImageStart=0x7f080001;

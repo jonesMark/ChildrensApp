@@ -11,12 +11,11 @@ public class MyZoo extends MainActivity {
 	private int lastnum = 0;
 	private boolean tiger = false;
 	private boolean cow = false;
-	SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());//uses the default app preferences
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_my_zoo);
-
+		SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getBaseContext());//uses the default app preferences
 		//Next up, check all animals to see if they were won
 		if (settings.getInt("Tiger", 0) ==1 ) {
 			tiger = true;
@@ -24,7 +23,7 @@ public class MyZoo extends MainActivity {
 		if (settings.getInt("Cow", 0) ==1 ) {
 			cow = true;
 		}
-		//Rub the initial buttonClick to have an animal showing or the default screen.
+		//run the initial buttonClick to have an animal showing or the default screen.
 		buttonClick();
 		
 
@@ -67,8 +66,9 @@ public class MyZoo extends MainActivity {
 		}
 		cyclenum++;
 		boolean keepgoing = true;
-		if (cow || tiger || cow || tiger) {
+		if (!cow || !tiger || !cow || !tiger) {
 			//no animals default screen, prevents infinite loops
+			
 		}
 		else
 		{
