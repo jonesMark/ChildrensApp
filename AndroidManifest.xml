@@ -58,6 +58,7 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
+        
         <activity
             android:name=".Tuturial3"
             android:label="@string/title_activity_tuturial3"
