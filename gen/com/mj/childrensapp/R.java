@@ -86,13 +86,12 @@ public final class R {
         public static final int ImageStart=0x7f080001;
         public static final int ImageStop=0x7f080003;
         public static final int acowsays=0x7f080018;
-        public static final int action_settings=0x7f080032;
+        public static final int action_settings=0x7f08002f;
         public static final int atigersays=0x7f080019;
         public static final int canyousay=0x7f08001a;
         public static final int exit=0x7f080017;
         public static final int gamecow=0x7f08001b;
         public static final int gametiger=0x7f08001c;
-        public static final int imageButton1=0x7f080031;
         public static final int imageView1=0x7f080005;
         public static final int imageView10=0x7f08000e;
         public static final int imageView11=0x7f08000f;
@@ -100,7 +99,6 @@ public final class R {
         public static final int imageView13=0x7f080011;
         public static final int imageView14=0x7f080012;
         public static final int imageView15=0x7f080013;
-        public static final int imageView16=0x7f080030;
         public static final int imageView2=0x7f080006;
         public static final int imageView3=0x7f080007;
         public static final int imageView4=0x7f080008;
@@ -111,7 +109,6 @@ public final class R {
         public static final int imageView9=0x7f08000d;
         public static final int linear2=0x7f080000;
         public static final int linear3=0x7f080002;
-        public static final int linearLayout1=0x7f08002f;
         public static final int myzoobutton=0x7f080027;
         public static final int myzoocow=0x7f08002b;
         public static final int myzoohome=0x7f080028;
@@ -142,8 +139,14 @@ public final class R {
         public static final int activity_settings=0x7f030003;
         public static final int activity_tuturial=0x7f030004;
         public static final int activity_tuturial2=0x7f030005;
-        public static final int youlosepopup=0x7f030006;
-        public static final int youwinpopup=0x7f030007;
+        public static final int activity_tuturial3=0x7f030006;
+        public static final int activity_tuturial4=0x7f030007;
+        public static final int activity_tuturial5=0x7f030008;
+        public static final int activity_tuturial6=0x7f030009;
+        public static final int activity_tuturial7=0x7f03000a;
+        public static final int activity_tuturial8=0x7f03000b;
+        public static final int youlosepopup=0x7f03000c;
+        public static final int youwinpopup=0x7f03000d;
     }
     public static final class menu {
         public static final int game=0x7f070000;
@@ -152,6 +155,12 @@ public final class R {
         public static final int settings=0x7f070003;
         public static final int tuturial=0x7f070004;
         public static final int tuturial2=0x7f070005;
+        public static final int tuturial3=0x7f070006;
+        public static final int tuturial4=0x7f070007;
+        public static final int tuturial5=0x7f070008;
+        public static final int tuturial6=0x7f070009;
+        public static final int tuturial7=0x7f07000a;
+        public static final int tuturial8=0x7f07000b;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -162,6 +171,12 @@ public final class R {
         public static final int title_activity_settings=0x7f050005;
         public static final int title_activity_tuturial=0x7f050003;
         public static final int title_activity_tuturial2=0x7f050006;
+        public static final int title_activity_tuturial3=0x7f050008;
+        public static final int title_activity_tuturial4=0x7f050009;
+        public static final int title_activity_tuturial5=0x7f05000a;
+        public static final int title_activity_tuturial6=0x7f05000b;
+        public static final int title_activity_tuturial7=0x7f05000c;
+        public static final int title_activity_tuturial8=0x7f05000d;
     }
     public static final class style {
         /** 

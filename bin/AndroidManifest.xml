@@ -57,6 +57,54 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
+        <activity
+            android:name=".Tuturial3"
+            android:label="@string/title_activity_tuturial3"
+            android:parentActivityName=".Tuturial2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial2" />
+        </activity>
+        <activity
+            android:name=".Tuturial4"
+            android:label="@string/title_activity_tuturial4"
+            android:parentActivityName=".Tuturial3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial3" />
+        </activity>
+        <activity
+            android:name=".Tuturial5"
+            android:label="@string/title_activity_tuturial5"
+            android:parentActivityName=".Tuturial4" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial4" />
+        </activity>
+        <activity
+            android:name=".Tuturial6"
+            android:label="@string/title_activity_tuturial6"
+            android:parentActivityName=".Tuturial5" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial5" />
+        </activity>
+        <activity
+            android:name=".Tuturial7"
+            android:label="@string/title_activity_tuturial7"
+            android:parentActivityName=".Tuturial6" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial6" />
+        </activity>
+        <activity
+            android:name=".Tuturial8"
+            android:label="@string/title_activity_tuturial8"
+            android:parentActivityName=".Tuturial7" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mj.childrensapp.Tuturial7" />
+        </activity>
     </application>
 
 </manifest>

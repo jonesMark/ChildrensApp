@@ -1,11 +1,23 @@
 package com.mj.childrensapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Tuturial2 extends Activity {
+	
+	public void sendRight(View view){
+		Intent intent = new Intent (this, Tuturial3.class);
+		startActivity(intent);
+	}
+	
+	public void sendLeft(View view){
+		Intent intent = new Intent (this, Tuturial.class);
+		startActivity(intent);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

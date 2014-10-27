@@ -1,33 +1,35 @@
 package com.mj.childrensapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Tuturial extends MainActivity {
-
+public class Tuturial5 extends Activity {
+	
 	public void sendRight(View view){
-		Intent intent = new Intent (this, Tuturial2.class);
+		Intent intent = new Intent (this, Tuturial6.class);
 		startActivity(intent);
 	}
 	
 	public void sendLeft(View view){
-		Intent intent = new Intent (this, MainActivity.class);
+		Intent intent = new Intent (this, Tuturial4.class);
 		startActivity(intent);
 	}
-	
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tuturial);
+		setContentView(R.layout.activity_tuturial5);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tuturial, menu);
+		getMenuInflater().inflate(R.menu.tuturial5, menu);
 		return true;
 	}
 

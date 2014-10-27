@@ -9,5 +9,11 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_tuturial2">Tuturial2</string>
     <string name="title_activity_my_zoo">MyZoo</string>
+    <string name="title_activity_tuturial3">Tuturial3</string>
+    <string name="title_activity_tuturial4">Tuturial4</string>
+    <string name="title_activity_tuturial5">Tuturial5</string>
+    <string name="title_activity_tuturial6">Tuturial6</string>
+    <string name="title_activity_tuturial7">Tuturial7</string>
+    <string name="title_activity_tuturial8">Tuturial8</string>
 
 </resources>
