@@ -222,8 +222,8 @@
          android:layout_above="@+id/imageView6"
          android:layout_alignParentLeft="true"
          android:layout_alignParentBottom="true"
-         android:layout_marginBottom="230dp"
-         android:layout_marginLeft="75dp"
+         android:layout_marginBottom="210dp"
+         android:layout_marginLeft="110dp"
          android:src="@drawable/game_soundkeeperfinal" />
          
          <ImageButton
@@ -290,17 +290,6 @@
          android:layout_marginLeft="365dp"
          android:visibility="invisible"
          android:src="@drawable/game_tigerfinal" />
-         
-         <ImageView
-         android:id="@+id/popblueback"
-         android:layout_width="fill_parent"
-         android:layout_height="fill_parent"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="0dp"
-         android:layout_marginLeft="0dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_bluebackfinal" />
          
          <ImageView
          android:id="@+id/popback"
@@ -378,5 +367,14 @@
          android:layout_marginLeft="180dp"
          android:visibility="invisible"
          android:src="@drawable/game_tryagainfinal" />
+
+         <ImageView
+             android:id="@+id/popblueback"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:src="@drawable/game_bluebackfinal"
+             android:visibility="invisible" />
 
 </RelativeLayout>

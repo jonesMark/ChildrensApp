@@ -1,15 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:background="@drawable/mainbackgroundfinal"
+    android:background="@drawable/home_backgroundfinal"
     android:layout_height="fill_parent" >
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/mainkeeperfinal" />
 
     <ImageButton
         android:id="@+id/tutbutton"
@@ -17,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/tutbuttonfinal" />
+        android:src="@drawable/home_tutbuttonfinal" />
 
     <ImageButton
         android:id="@+id/myzoobutton"
@@ -25,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tutbutton"
         android:layout_below="@+id/tutbutton"
-        android:src="@drawable/myzoofinal" />
+        android:src="@drawable/home_myzoofinal" />
 
     <ImageButton
         android:id="@+id/playbutton"
@@ -33,6 +25,14 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/tutbutton"
         android:layout_alignLeft="@+id/tutbutton"
-        android:src="@drawable/playbuttonfinal" />
+        android:src="@drawable/home_playbuttonfinal" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/home_keeperfinal" />
 
 </RelativeLayout>
