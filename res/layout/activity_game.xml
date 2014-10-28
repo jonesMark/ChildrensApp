@@ -207,8 +207,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView6"
         android:layout_alignLeft="@+id/imageView6"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="-15dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="-23dp"
         android:src="@drawable/game_rangeboxfinal"
         android:visibility="invisible" />
 
@@ -219,7 +219,7 @@
         android:layout_above="@+id/imageView10"
         android:layout_alignLeft="@+id/imageView6"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="-15dp"
+        android:layout_marginLeft="-23dp"
         android:src="@drawable/game_rangeboxfinal"
         android:visibility="invisible" />
 
@@ -231,7 +231,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="230dp"
-        android:layout_marginLeft="75dp"
+        android:layout_marginLeft="110dp"
         android:src="@drawable/game_soundkeeperfinal" />
 
     <ImageButton
