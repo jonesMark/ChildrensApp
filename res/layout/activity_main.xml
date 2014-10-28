@@ -1,37 +1,38 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center"
     android:background="@drawable/mainbackgroundfinal"
-    android:orientation="vertical" >
-     
+    android:layout_height="fill_parent" >
 
-    <ImageButton
-        android:id="@+id/imageView4"
-            android:gravity="center"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:src="@drawable/mainkeeperfinal" />
 
     <ImageButton
-        android:id="@+id/playbutton"
-            android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/playbuttonfinal" />
-
-    <ImageButton
         android:id="@+id/tutbutton"
-            android:gravity="center"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/tutbuttonfinal" />
 
     <ImageButton
         android:id="@+id/myzoobutton"
-            android:gravity="center"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tutbutton"
+        android:layout_below="@+id/tutbutton"
         android:src="@drawable/myzoofinal" />
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/playbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tutbutton"
+        android:layout_alignLeft="@+id/tutbutton"
+        android:src="@drawable/playbuttonfinal" />
+
+</RelativeLayout>

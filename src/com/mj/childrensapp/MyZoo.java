@@ -107,7 +107,13 @@ public class MyZoo extends MainActivity {
 			cyclenum --;
 			if (cyclenum == -1) {//this makes sure all animals are correct.  In the final version, I will likely put a switch in its place inside of the if (cow || tiger...s
 				//put two others before these
-				if (tiger) {
+				if (false) {
+					
+				}
+				else if (false) {
+					
+				}
+				else if (tiger) {
 					lastnum = 1;
 				}
 				else if (cow) {

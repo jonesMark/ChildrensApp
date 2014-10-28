@@ -109,13 +109,13 @@ public final class R {
         public static final int imageView9=0x7f08000d;
         public static final int linear2=0x7f080000;
         public static final int linear3=0x7f080002;
-        public static final int myzoobutton=0x7f080027;
+        public static final int myzoobutton=0x7f080026;
         public static final int myzoocow=0x7f08002b;
         public static final int myzoohome=0x7f080028;
         public static final int myzooleft=0x7f08002c;
         public static final int myzooright=0x7f080029;
         public static final int myzootiger=0x7f08002a;
-        public static final int playbutton=0x7f080025;
+        public static final int playbutton=0x7f080027;
         public static final int popback=0x7f08001e;
         public static final int popblueback=0x7f08001d;
         public static final int popcow=0x7f08001f;
@@ -128,7 +128,7 @@ public final class R {
         public static final int slidetryagain=0x7f080024;
         public static final int soundbarback=0x7f080004;
         public static final int soundkeep=0x7f080016;
-        public static final int tutbutton=0x7f080026;
+        public static final int tutbutton=0x7f080025;
         public static final int tutleft=0x7f08002e;
         public static final int tutright=0x7f08002d;
     }

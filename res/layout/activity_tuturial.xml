@@ -10,18 +10,11 @@
         android:id="@+id/tutright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/tut_rightarrowfinal"
-        android:onClick="sendRight" />
-
-    <ImageButton
-        android:id="@+id/tutleft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/tut_leftarrowfinal"
-        android:onClick="sendLeft" />
+        android:layout_marginRight="15dp"
+        android:background="@android:color/transparent"
+        android:onClick="sendRight"
+        android:src="@drawable/tut_rightarrowfinal" />
 
 </RelativeLayout>
