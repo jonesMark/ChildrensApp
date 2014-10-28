@@ -6,7 +6,6 @@
     android:gravity="top"
     tools:context=".MainActivity" >
 
-
     <LinearLayout
         android:id="@+id/linear2"
         android:layout_width="match_parent"
@@ -21,360 +20,371 @@
             android:layout_marginLeft="65dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/game_startfinal" />
-
-
     </LinearLayout>
-        <LinearLayout
+
+    <LinearLayout
         android:id="@+id/linear3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="horizontal" >
-        
-                    <ImageButton
+
+        <ImageButton
             android:id="@+id/ImageStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
             android:layout_marginTop="20dp"
-            android:visibility="invisible"
-            android:src="@drawable/game_pausefinal" />
-
+            android:src="@drawable/game_pausefinal"
+            android:visibility="invisible" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/soundbarback"
+        android:layout_width="194dp"
+        android:layout_height="660dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="740dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/game_barbackfinal" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/soundbarback"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="74dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
 
-     <ImageView
-         android:id="@+id/soundbarback"
-         android:layout_width="194dp"
-         android:layout_height="660dp"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginBottom="60dp"
-         android:layout_marginTop="60dp"
-         android:layout_marginLeft="740dp"
-         android:src="@drawable/game_barbackfinal" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
 
-     <ImageView
-         android:id="@+id/imageView1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignBottom="@+id/soundbarback"
-         android:layout_alignParentRight="true"
-         android:layout_marginBottom="15dp"
-         android:layout_marginRight="74dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
 
-     <ImageView
-         android:id="@+id/imageView2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView1"
-         android:layout_alignLeft="@+id/imageView1"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView3"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView2"
-         android:layout_alignLeft="@+id/imageView2"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView4"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView3"
-         android:layout_alignLeft="@+id/imageView3"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView5"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView4"
-         android:layout_alignLeft="@+id/imageView4"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView6"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView5"
-         android:layout_alignLeft="@+id/imageView5"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView7"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView6"
-         android:layout_alignLeft="@+id/imageView6"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView8"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView7"
-         android:layout_alignLeft="@+id/imageView7"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView9"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView8"
-         android:layout_alignLeft="@+id/imageView8"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView10"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView9"
-         android:layout_alignLeft="@+id/imageView9"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView11"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView10"
-         android:layout_alignLeft="@+id/imageView10"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView12"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView11"
-         android:layout_alignLeft="@+id/imageView11"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView13"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView12"
-         android:layout_alignLeft="@+id/imageView12"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView14"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView13"
-         android:layout_alignLeft="@+id/imageView13"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     <ImageView
-         android:id="@+id/imageView15"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView14"
-         android:layout_alignLeft="@+id/imageView14"
-         android:layout_marginBottom="10dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_orangeboxfinal" />
-     
-          <ImageView
-         android:id="@+id/rangboxcow"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView6"
-         android:layout_alignLeft="@+id/imageView6"
-         android:layout_marginBottom="10dp"
-         android:layout_marginLeft="-15dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_rangeboxfinal" />
-          
-         <ImageView
-         android:id="@+id/rangboxtiger"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView10"
-         android:layout_alignLeft="@+id/imageView6"
-         android:layout_marginBottom="10dp"
-         android:layout_marginLeft="-15dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_rangeboxfinal" />
-          
-         <ImageView
-         android:id="@+id/soundkeep"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView6"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentBottom="true"
-         android:layout_marginBottom="210dp"
-         android:layout_marginLeft="110dp"
-         android:src="@drawable/game_soundkeeperfinal" />
-         
-         <ImageButton
-         android:id="@+id/exit"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/imageView6"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentBottom="true"
-         android:layout_marginBottom="60dp"
-         android:layout_marginLeft="62dp"
-         android:src="@drawable/game_exitfinal" />
-         
-         <ImageView
-         android:id="@+id/acowsays"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="70dp"
-         android:layout_marginLeft="310dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_cowsaysfinal" />
-         
-         <ImageView
-         android:id="@+id/atigersays"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="70dp"
-         android:layout_marginLeft="310dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_tigersaysfinal" />
-         
-         <ImageView
-         android:id="@+id/canyousay"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="150dp"
-         android:layout_marginLeft="310dp"
-         android:src="@drawable/game_canyousayfinal" />
-         
-         <ImageView
-         android:id="@+id/gamecow"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentBottom="true"
-         android:layout_marginBottom="70dp"
-         android:layout_marginLeft="355dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_cowfinal" />
-         
-         <ImageView
-         android:id="@+id/gametiger"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentBottom="true"
-         android:layout_marginBottom="70dp"
-         android:layout_marginLeft="365dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_tigerfinal" />
-         
-         <ImageView
-         android:id="@+id/popback"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="80dp"
-         android:layout_marginLeft="150dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_popbackfinal" />
-         
-         <ImageView
-         android:id="@+id/popcow"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="120dp"
-         android:layout_marginLeft="190dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_popcowfinal" />
-         
-         <ImageView
-         android:id="@+id/poptiger"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="100dp"
-         android:layout_marginLeft="190dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_poptigerfinal" />
-         
-         <ImageView
-         android:id="@+id/popwin"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="115dp"
-         android:layout_marginLeft="480dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_popwinfinal" />
-         
-         <ImageView
-         android:id="@+id/poptime"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="115dp"
-         android:layout_marginLeft="480dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_timeupfinal" />
-         
-         <ImageButton
-         android:id="@+id/slidecont"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="340dp"
-         android:layout_marginLeft="180dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_slidecontfinal" />
-         
-         <ImageButton
-         android:id="@+id/slidetryagain"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="340dp"
-         android:layout_marginLeft="180dp"
-         android:visibility="invisible"
-         android:src="@drawable/game_tryagainfinal" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView3"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
 
-         <ImageView
-             android:id="@+id/popblueback"
-             android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-             android:layout_alignParentLeft="true"
-             android:layout_alignParentTop="true"
-             android:src="@drawable/game_bluebackfinal"
-             android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView5"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView6"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView7"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView8"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView9"
+        android:layout_alignLeft="@+id/imageView9"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView10"
+        android:layout_alignLeft="@+id/imageView10"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView11"
+        android:layout_alignLeft="@+id/imageView11"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView12"
+        android:layout_alignLeft="@+id/imageView12"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView13"
+        android:layout_alignLeft="@+id/imageView13"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView14"
+        android:layout_alignLeft="@+id/imageView14"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/game_orangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/rangboxcow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView6"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="-15dp"
+        android:src="@drawable/game_rangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/rangboxtiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView10"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="-15dp"
+        android:src="@drawable/game_rangeboxfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/soundkeep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="230dp"
+        android:layout_marginLeft="75dp"
+        android:src="@drawable/game_soundkeeperfinal" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="62dp"
+        android:src="@drawable/game_exitfinal" />
+
+    <ImageView
+        android:id="@+id/acowsays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/game_cowsaysfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/atigersays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/game_tigersaysfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/canyousay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/game_canyousayfinal" />
+
+    <ImageView
+        android:id="@+id/gamecow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="355dp"
+        android:src="@drawable/game_cowfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/gametiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="365dp"
+        android:src="@drawable/game_tigerfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/popblueback"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/game_bluebackfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/popback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/game_popbackfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/popcow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/game_popcowfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/poptiger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/game_poptigerfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/popwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="480dp"
+        android:layout_marginTop="115dp"
+        android:src="@drawable/game_popwinfinal"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/poptime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="480dp"
+        android:layout_marginTop="115dp"
+        android:src="@drawable/game_timeupfinal"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/slidecont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/game_slidecontfinal"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/slidetryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/game_tryagainfinal"
+        android:visibility="invisible" />
 
 </RelativeLayout>

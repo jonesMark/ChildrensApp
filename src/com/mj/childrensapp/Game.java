@@ -1,8 +1,6 @@
 package com.mj.childrensapp;
-
 import java.io.IOException;
 import java.util.Random;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -18,9 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
 public class Game extends MainActivity {
-
 	private MediaRecorder myRecorder;
 	private MediaPlayer myPlayer;
 	private String outputFile = null;
@@ -30,7 +26,7 @@ public class Game extends MainActivity {
 	private ImageButton slidecont;
 	private ImageButton slideagain;
 	private ImageButton exitbtn;
-	private int mInterval = 150; //this is the timestep in miliseconds 
+	private int mInterval = 150; //this is the timestep in miliseconds
 	private Handler mHandler;
 	private double multiplier = 1.05; //a little more control added, maybe use for the future.
 	private double ampNum = 0;
@@ -42,7 +38,6 @@ public class Game extends MainActivity {
 	int timeleftmaster = 100;
 	int timeleft;
 	Random random = new Random();
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,14 +47,12 @@ public class Game extends MainActivity {
 		// store it to sd card
 		outputFile = Environment.getExternalStorageDirectory().
 				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-
 		myRecorder = new MediaRecorder();
 		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
-
 		animalVal = setAnimal(animalVal);
 		if(animalVal ==1){
 			findViewById(R.id.acowsays).setVisibility(View.VISIBLE);
@@ -77,7 +70,6 @@ public class Game extends MainActivity {
 		}
 		imageStart = (ImageButton)findViewById(R.id.ImageStart);
 		imageStart.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -86,7 +78,6 @@ public class Game extends MainActivity {
 		});
 		imageStop = (ImageButton)findViewById(R.id.ImageStop);
 		imageStop.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -95,7 +86,6 @@ public class Game extends MainActivity {
 		});
 		slidecont = (ImageButton)findViewById(R.id.slidecont);
 		slidecont.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -104,7 +94,6 @@ public class Game extends MainActivity {
 		});
 		slideagain = (ImageButton)findViewById(R.id.slidetryagain);
 		slideagain.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -113,7 +102,6 @@ public class Game extends MainActivity {
 		});
 		exitbtn = (ImageButton)findViewById(R.id.exit);
 		exitbtn.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -127,14 +115,12 @@ public class Game extends MainActivity {
 		slidecont.setBackgroundColor(Color.TRANSPARENT);
 		slideagain.setBackgroundColor(Color.TRANSPARENT);
 		exitbtn.setBackgroundColor(Color.TRANSPARENT);
-
 	}
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.game, menu);
 		return true;
 	}
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -153,7 +139,7 @@ public class Game extends MainActivity {
 			myRecorder.start();
 		} catch (IllegalStateException e) {
 			// start:it is called before prepare()
-			// prepare: it is called after start() or before setOutputFormat() 
+			// prepare: it is called after start() or before setOutputFormat()
 			e.printStackTrace();
 		} catch (IOException e) {
 			// prepare() fails
@@ -169,22 +155,18 @@ public class Game extends MainActivity {
 		timeleft = timeleftmaster;
 		startRepeatingTask();
 	}
-
 	public void stop(View view){
 		try {
 			myRecorder.stop();
 			myRecorder.release();
-			myRecorder  = null;
-
+			myRecorder = null;
 			imageStop.setEnabled(false);
 			imageStop.setVisibility(View.INVISIBLE);
 			imageStart.setEnabled(true);
 			imageStart.setVisibility(View.VISIBLE);
-
 			stopRepeatingTask();
-
 		} catch (IllegalStateException e) {
-			//  it is called before start()
+			// it is called before start()
 			e.printStackTrace();
 		} catch (RuntimeException e) {
 			// no valid audio/video data has been received
@@ -192,7 +174,6 @@ public class Game extends MainActivity {
 		}
 		outputFile = Environment.getExternalStorageDirectory().
 				getAbsolutePath() + "/javacodegeeksRecording.3gpp";
-
 		myRecorder = new MediaRecorder();
 		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -200,7 +181,6 @@ public class Game extends MainActivity {
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
 	}
-
 	public void cont(View view){
 		animalVal = setAnimal(animalVal);
 		if(animalVal ==1){
@@ -231,28 +211,22 @@ public class Game extends MainActivity {
 		slidecont.setEnabled(false);
 		exitbtn.setEnabled(true);
 		slidecont.setVisibility(View.INVISIBLE);
-
 		imageStop.setEnabled(false);
 		imageStop.setVisibility(View.INVISIBLE);
 		imageStart.setEnabled(true);
 		imageStart.setVisibility(View.VISIBLE);
-
 		ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
 		for (int k=0; k<15; k++) {
 			soundBar[k].setVisibility(View.INVISIBLE);
 		}
-
 		myRecorder = new MediaRecorder();
 		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
-
 	}
 	public void again(View view){
-
-
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
@@ -261,38 +235,31 @@ public class Game extends MainActivity {
 		slideagain.setEnabled(false);
 		exitbtn.setEnabled(true);
 		slideagain.setVisibility(View.INVISIBLE);
-
 		imageStop.setEnabled(false);
 		imageStop.setVisibility(View.INVISIBLE);
 		imageStart.setEnabled(true);
 		imageStart.setVisibility(View.VISIBLE);
-
 		ImageView[] soundBar = {(ImageView)findViewById(R.id.imageView1),(ImageView)findViewById(R.id.imageView2),(ImageView)findViewById(R.id.imageView3),(ImageView)findViewById(R.id.imageView4),(ImageView)findViewById(R.id.imageView5),(ImageView)findViewById(R.id.imageView6),(ImageView)findViewById(R.id.imageView7),(ImageView)findViewById(R.id.imageView8),(ImageView)findViewById(R.id.imageView9),(ImageView)findViewById(R.id.imageView10),(ImageView)findViewById(R.id.imageView11),(ImageView)findViewById(R.id.imageView12),(ImageView)findViewById(R.id.imageView13),(ImageView)findViewById(R.id.imageView14),(ImageView)findViewById(R.id.imageView15)};
 		for (int k=0; k<15; k++) {
 			soundBar[k].setVisibility(View.INVISIBLE);
 		}
-
 		myRecorder = new MediaRecorder();
 		myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 		myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
-
 	}
-
 	public void exit(View view){
 		stop(view);
 		Intent intent = new Intent (this, MainActivity.class);
 		startActivity(intent);
 	}
-
 	private double getAmplitude() {
 		if (myRecorder != null) {
 			double m = myRecorder.getMaxAmplitude();
 			return (m);
 		} else {
-
 			return 0;
 		}
 	}
@@ -301,7 +268,7 @@ public class Game extends MainActivity {
 	}
 	//this is the repeating task
 	Runnable mStatusChecker = new Runnable() {
-		@Override 
+		@Override
 		public void run() {
 			mHandler.postDelayed(mStatusChecker, mInterval);
 			ampNum =getAmplitude();
@@ -321,12 +288,11 @@ public class Game extends MainActivity {
 					try {
 						myRecorder.stop();
 						myRecorder.release();
-						myRecorder  = null;
-
+						myRecorder = null;
 						//text.setText("Recording Point: Stop recording");
 						stopRepeatingTask();
 					} catch (IllegalStateException e) {
-						//  it is called before start()
+						// it is called before start()
 						e.printStackTrace();
 					} catch (RuntimeException e) {
 						// no valid audio/video data has been received
@@ -358,15 +324,12 @@ public class Game extends MainActivity {
 						//animalTiger is the name the value is stored under, tiger is the int itself.
 						editor.putInt("Tiger", tiger);
 						editor.commit();
-
 					}
 					slidecont.setEnabled(true);
 					exitbtn.setEnabled(false);
 					slidecont.setVisibility(View.VISIBLE);
-
 					//Put in data saving here for Myzoo remembering.
 				}
-
 			}
 			else{
 				timeleft--;
@@ -376,12 +339,11 @@ public class Game extends MainActivity {
 				try {
 					myRecorder.stop();
 					myRecorder.release();
-					myRecorder  = null;
-
+					myRecorder = null;
 					//text.setText("Recording Point: Stop recording");
 					stopRepeatingTask();
 				} catch (IllegalStateException e) {
-					//  it is called before start()
+					// it is called before start()
 					e.printStackTrace();
 				} catch (RuntimeException e) {
 					// no valid audio/video data has been received
@@ -407,19 +369,15 @@ public class Game extends MainActivity {
 				soundBar[i].setVisibility(View.VISIBLE);
 				i++;
 				veiwNum--;
-
 			}
 		}
 	};
-
 	void startRepeatingTask() {
-		mStatusChecker.run(); 
+		mStatusChecker.run();
 	}
-
 	void stopRepeatingTask() {
 		mHandler.removeCallbacks(mStatusChecker);
 	}
-
 	private int setAnimal(int current){
 		int ran = current;
 		while (ran == current){
@@ -427,5 +385,4 @@ public class Game extends MainActivity {
 		}
 		return ran;
 	}
-
 }
