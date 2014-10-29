@@ -1,12 +1,15 @@
 package com.mj.childrensapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class Tuturial extends MainActivity {
+	private ImageButton homebtn;
 	
 	public void sendHome(View view){
 		Intent intent = new Intent (this, MainActivity.class);
@@ -27,6 +30,9 @@ public class Tuturial extends MainActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tuturial);
+		
+		homebtn = (ImageButton)findViewById(R.id.myzoohome);
+		homebtn.setBackgroundColor(Color.TRANSPARENT);
 	}
 
 	@Override

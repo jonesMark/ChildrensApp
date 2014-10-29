@@ -2,12 +2,16 @@ package com.mj.childrensapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class Tuturial2 extends Activity {
+	
+	private ImageButton homebtn;
 	
 	public void sendHome(View view){
 		Intent intent = new Intent (this, MainActivity.class);
@@ -28,6 +32,9 @@ public class Tuturial2 extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tuturial2);
+		
+		homebtn = (ImageButton)findViewById(R.id.myzoohome);
+		homebtn.setBackgroundColor(Color.TRANSPARENT);
 	}
 
 	@Override
@@ -35,6 +42,7 @@ public class Tuturial2 extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.tuturial2, menu);
 		return true;
+		
 	}
 
 	@Override
