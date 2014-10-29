@@ -53,7 +53,9 @@ public class Game extends MainActivity {
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
+		//set the animal to a random animal
 		animalVal = setAnimal(animalVal);
+		//if animaval == 1 then it's a cow
 		if(animalVal ==1){
 			findViewById(R.id.acowsays).setVisibility(View.VISIBLE);
 			findViewById(R.id.gamecow).setVisibility(View.VISIBLE);
@@ -61,6 +63,7 @@ public class Game extends MainActivity {
 			ampMin =6;
 			ampMax =11;
 		}
+		// if it's 2 then it's a tiger
 		else if(animalVal == 2){
 			findViewById(R.id.atigersays).setVisibility(View.VISIBLE);
 			findViewById(R.id.gametiger).setVisibility(View.VISIBLE);
@@ -68,6 +71,8 @@ public class Game extends MainActivity {
 			ampMin =10;
 			ampMax =15;
 		}
+		// set up all the buttons for the page
+		// image start will start the amp meter
 		imageStart = (ImageButton)findViewById(R.id.ImageStart);
 		imageStart.setOnClickListener(new OnClickListener() {
 			@Override
@@ -76,6 +81,7 @@ public class Game extends MainActivity {
 				start(v);
 			}
 		});
+		//image stop will pause the game
 		imageStop = (ImageButton)findViewById(R.id.ImageStop);
 		imageStop.setOnClickListener(new OnClickListener() {
 			@Override
@@ -84,6 +90,7 @@ public class Game extends MainActivity {
 				stop(v);
 			}
 		});
+		//slide cont will bring you to the next animal
 		slidecont = (ImageButton)findViewById(R.id.slidecont);
 		slidecont.setOnClickListener(new OnClickListener() {
 			@Override
@@ -92,6 +99,7 @@ public class Game extends MainActivity {
 				cont(v);
 			}
 		});
+		//slide again will bring you back to the same animal so you can try again
 		slideagain = (ImageButton)findViewById(R.id.slidetryagain);
 		slideagain.setOnClickListener(new OnClickListener() {
 			@Override
@@ -100,6 +108,7 @@ public class Game extends MainActivity {
 				again(v);
 			}
 		});
+		//exitbtn will take you back to the main menu
 		exitbtn = (ImageButton)findViewById(R.id.exit);
 		exitbtn.setOnClickListener(new OnClickListener() {
 			@Override
@@ -134,6 +143,8 @@ public class Game extends MainActivity {
 	}
 	//what happens when you press the start button
 	public void start(View view){
+		imageStart.setEnabled(false);
+		imageStart.setVisibility(View.INVISIBLE);
 		try {
 			myRecorder.prepare();
 			myRecorder.start();
@@ -146,8 +157,8 @@ public class Game extends MainActivity {
 			e.printStackTrace();
 		}
 		// disable start button, enable stop
-		imageStart.setEnabled(false);
-		imageStart.setVisibility(View.INVISIBLE);
+		//imageStart.setEnabled(false);
+		//imageStart.setVisibility(View.INVISIBLE);
 		imageStop.setEnabled(true);
 		imageStop.setVisibility(View.VISIBLE);
 		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
@@ -155,6 +166,7 @@ public class Game extends MainActivity {
 		timeleft = timeleftmaster;
 		startRepeatingTask();
 	}
+	//what happens when you press the pause button, 
 	public void stop(View view){
 		try {
 			myRecorder.stop();
@@ -162,8 +174,8 @@ public class Game extends MainActivity {
 			myRecorder = null;
 			imageStop.setEnabled(false);
 			imageStop.setVisibility(View.INVISIBLE);
-			imageStart.setEnabled(true);
-			imageStart.setVisibility(View.VISIBLE);
+			//imageStart.setEnabled(true);
+			//imageStart.setVisibility(View.VISIBLE);
 			stopRepeatingTask();
 		} catch (IllegalStateException e) {
 			// it is called before start()
@@ -180,9 +192,14 @@ public class Game extends MainActivity {
 		myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
+		imageStart.setEnabled(true);
+		imageStart.setVisibility(View.VISIBLE);
 	}
+	//what happens when you press slidetocontinue
 	public void cont(View view){
+		//reset the animal val to something else
 		animalVal = setAnimal(animalVal);
+		//set up the new animal based upon the animal val
 		if(animalVal ==1){
 			findViewById(R.id.atigersays).setVisibility(View.INVISIBLE);
 			findViewById(R.id.gametiger).setVisibility(View.INVISIBLE);
@@ -203,6 +220,7 @@ public class Game extends MainActivity {
 			ampMin =10;
 			ampMax =15;
 		}
+		//make the pop up disapear
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
@@ -224,6 +242,7 @@ public class Game extends MainActivity {
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
 	}
+	//what happens when you press the slide again button
 	public void again(View view){
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
@@ -246,11 +265,13 @@ public class Game extends MainActivity {
 		myRecorder.setOutputFile(outputFile);
 		mHandler = new Handler();
 	}
+	//what happens when you press the exit button
 	public void exit(View view){
 		stop(view);
 		Intent intent = new Intent (this, MainActivity.class);
 		startActivity(intent);
 	}
+	//a method that finds the the amplitude
 	private double getAmplitude() {
 		if (myRecorder != null) {
 			double m = myRecorder.getMaxAmplitude();
@@ -259,9 +280,7 @@ public class Game extends MainActivity {
 			return 0;
 		}
 	}
-	public void GetAmp(View view) {
-		//text.setText("Recording Point: Recording, Amp: "+ getAmplitude());
-	}
+
 	//this is the repeating task
 	Runnable mStatusChecker = new Runnable() {
 		@Override
@@ -278,9 +297,12 @@ public class Game extends MainActivity {
 			for (int k=0; k<15; k++) {
 				soundBar[k].setVisibility(View.INVISIBLE);
 			}
+			//check if amp is in range
 			if (veiwNum > ampMin && veiwNum < ampMax){
 				winNum++;
+				//check if player has won
 				if (winNum ==10){
+					//stop recording and display pop up
 					try {
 						myRecorder.stop();
 						myRecorder.release();
@@ -325,11 +347,14 @@ public class Game extends MainActivity {
 					//Put in data saving here for Myzoo remembering.
 				}
 			}
+			//else decrement the remaining time
 			else{
 				timeleft--;
 				winNum =0;
 			}
+			//check if there is time left
 			if (timeleft <= 0){
+				//if not display the times up pop up
 				try {
 					myRecorder.stop();
 					myRecorder.release();
@@ -360,12 +385,14 @@ public class Game extends MainActivity {
 			}
 		}
 	};
+	//methods for the handler
 	void startRepeatingTask() {
 		mStatusChecker.run();
 	}
 	void stopRepeatingTask() {
 		mHandler.removeCallbacks(mStatusChecker);
 	}
+	//sets animal val to a number not equal to the current animal val
 	private int setAnimal(int current){
 		int ran = current;
 		while (ran == current){
