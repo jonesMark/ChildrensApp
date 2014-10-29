@@ -9,6 +9,11 @@ import android.view.View;
 
 public class Tuturial4 extends Activity {
 	
+	public void sendHome(View view){
+		Intent intent = new Intent (this, MainActivity.class);
+		startActivity(intent);
+	}
+	
 	public void sendRight(View view){
 		Intent intent = new Intent (this, Tuturial5.class);
 		startActivity(intent);

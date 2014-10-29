@@ -7,7 +7,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class Tuturial extends MainActivity {
-
+	
+	public void sendHome(View view){
+		Intent intent = new Intent (this, MainActivity.class);
+		startActivity(intent);
+	}
+	
 	public void sendRight(View view){
 		Intent intent = new Intent (this, Tuturial2.class);
 		startActivity(intent);

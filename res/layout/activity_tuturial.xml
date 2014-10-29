@@ -16,5 +16,15 @@
         android:background="@android:color/transparent"
         android:onClick="sendRight"
         android:src="@drawable/tut_rightarrowfinal" />
+    
+    <ImageButton
+        android:id="@+id/myzoohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/tutorial_exitb"
+        android:onClick="sendHome" />
 
 </RelativeLayout>

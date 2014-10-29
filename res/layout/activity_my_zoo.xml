@@ -10,7 +10,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/myzoo_homefinal" />
+        android:src="@drawable/tutorial_exitb" />
 
     <ImageView
         android:id="@+id/myzooright"
