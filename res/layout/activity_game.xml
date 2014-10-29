@@ -321,49 +321,7 @@
         android:src="@drawable/game_popbackfinal"
         android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/popcow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/game_popcowfinal"
-        android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/poptiger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/game_poptigerfinal"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/popwin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="480dp"
-        android:layout_marginTop="115dp"
-        android:src="@drawable/game_popwinfinal"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/poptime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="480dp"
-        android:layout_marginTop="115dp"
-        android:src="@drawable/game_timeupfinal"
-        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/slidecont"
@@ -371,9 +329,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="340dp"
-        android:src="@drawable/game_slidecontfinal"
+        android:layout_marginLeft="205dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/game_popnextfinal"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/popwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="360dp"
+        android:src="@drawable/game_popwinfinal"
         android:visibility="invisible" />
 
     <ImageButton
@@ -382,9 +351,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="340dp"
-        android:src="@drawable/game_tryagainfinal"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/game_popretryfinal"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/popoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="360dp"
+        android:src="@drawable/game_popoutoftimefinal"
         android:visibility="invisible" />
 
 </RelativeLayout>

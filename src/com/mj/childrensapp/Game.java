@@ -205,8 +205,6 @@ public class Game extends MainActivity {
 		}
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
-		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
-		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popwin).setVisibility(View.INVISIBLE);
 		slidecont.setEnabled(false);
 		exitbtn.setEnabled(true);
@@ -229,9 +227,7 @@ public class Game extends MainActivity {
 	public void again(View view){
 		findViewById(R.id.popblueback).setVisibility(View.INVISIBLE);
 		findViewById(R.id.popback).setVisibility(View.INVISIBLE);
-		findViewById(R.id.popcow).setVisibility(View.INVISIBLE);
-		findViewById(R.id.poptiger).setVisibility(View.INVISIBLE);
-		findViewById(R.id.poptime).setVisibility(View.INVISIBLE);
+		findViewById(R.id.popoot).setVisibility(View.INVISIBLE);
 		slideagain.setEnabled(false);
 		exitbtn.setEnabled(true);
 		slideagain.setVisibility(View.INVISIBLE);
@@ -304,7 +300,6 @@ public class Game extends MainActivity {
 					findViewById(R.id.popback).setVisibility(View.VISIBLE);
 					findViewById(R.id.popwin).setVisibility(View.VISIBLE);
 					if (animalVal == 1){
-						findViewById(R.id.popcow).setVisibility(View.VISIBLE);
 						//This is saving the file system for the cow, so MyZoo remembers it.
 						int cow = 1;//won the cow
 						//open settings and add the editor
@@ -315,7 +310,6 @@ public class Game extends MainActivity {
 						editor.commit();
 					}
 					if (animalVal == 2){
-						findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
 						//This is saving the file system for the cow, so MyZoo remembers it.
 						int tiger = 1;//won the cow
 						//open settings and add the editor
@@ -353,13 +347,7 @@ public class Game extends MainActivity {
 						getAbsolutePath() + "/javacodegeeksRecording.3gpp";
 				findViewById(R.id.popblueback).setVisibility(View.VISIBLE);
 				findViewById(R.id.popback).setVisibility(View.VISIBLE);
-				findViewById(R.id.poptime).setVisibility(View.VISIBLE);
-				if (animalVal == 1){
-					findViewById(R.id.popcow).setVisibility(View.VISIBLE);
-				}
-				if (animalVal == 2){
-					findViewById(R.id.poptiger).setVisibility(View.VISIBLE);
-				}
+				findViewById(R.id.popoot).setVisibility(View.VISIBLE);
 				slideagain.setEnabled(true);
 				exitbtn.setEnabled(false);
 				slideagain.setVisibility(View.VISIBLE);
