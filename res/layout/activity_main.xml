@@ -1,34 +1,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:background="@drawable/home_backgroundfinal"
-    android:layout_height="fill_parent" >
-
-    <ImageButton
-        android:id="@+id/tutbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/home_tutbuttonfinal" />
-
-    <ImageButton
-        android:id="@+id/myzoobutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tutbutton"
-        android:layout_below="@+id/tutbutton"
-        android:src="@drawable/home_myzoofinal" />
-
-    <ImageButton
-        android:id="@+id/playbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tutbutton"
-        android:layout_alignLeft="@+id/tutbutton"
-        android:src="@drawable/home_playbuttonfinal" />
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_backgroundfinal" >
 
     <ImageView
         android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/home_ampizoofinal" />
+
+    <ImageView
+        android:id="@+id/playbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/home_playfinal" />
+
+    <ImageView
+        android:id="@+id/tutbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/home_tutbutton" />
+
+    <ImageView
+        android:id="@+id/myzoobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/home_myzoofinal" />
+
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

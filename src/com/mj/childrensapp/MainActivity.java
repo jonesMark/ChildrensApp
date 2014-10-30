@@ -1,16 +1,13 @@
 package com.mj.childrensapp;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 /*
  * This is how to use file saving on the system (using 0 for no, 1 for yes (won that animal):
  * This can also work for saving any variable necessary (strings and ints are the easiest to use for preferences)
@@ -55,9 +52,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//initiallize buttones
-		ImageButton gameButton = (ImageButton) findViewById(R.id.playbutton);
-		ImageButton tutButton = (ImageButton) findViewById(R.id.tutbutton);
-		ImageButton myzooButton = (ImageButton) findViewById(R.id.myzoobutton);
+		ImageView gameButton = (ImageView) findViewById(R.id.playbutton);
+		ImageView tutButton = (ImageView) findViewById(R.id.tutbutton);
+		ImageView myzooButton = (ImageView) findViewById(R.id.myzoobutton);
 		//Make buttons invisisble
 		//gameButton.setVisibility(View.VISIBLE);
 		gameButton.setBackgroundColor(Color.TRANSPARENT);
