@@ -86,12 +86,13 @@ public final class R {
         public static final int ImageStart=0x7f080001;
         public static final int ImageStop=0x7f080003;
         public static final int acowsays=0x7f080018;
-        public static final int action_settings=0x7f08002d;
+        public static final int action_settings=0x7f08002e;
         public static final int atigersays=0x7f080019;
         public static final int canyousay=0x7f08001a;
         public static final int exit=0x7f080017;
         public static final int gamecow=0x7f08001b;
         public static final int gametiger=0x7f08001c;
+        public static final int h=0x7f080026;
         public static final int imageView1=0x7f080005;
         public static final int imageView10=0x7f08000e;
         public static final int imageView11=0x7f08000f;
@@ -110,11 +111,11 @@ public final class R {
         public static final int linear2=0x7f080000;
         public static final int linear3=0x7f080002;
         public static final int myzoobutton=0x7f080025;
-        public static final int myzoocow=0x7f080029;
-        public static final int myzoohome=0x7f080026;
-        public static final int myzooleft=0x7f08002a;
-        public static final int myzooright=0x7f080027;
-        public static final int myzootiger=0x7f080028;
+        public static final int myzoocow=0x7f08002a;
+        public static final int myzoohome=0x7f080027;
+        public static final int myzooleft=0x7f08002b;
+        public static final int myzooright=0x7f080028;
+        public static final int myzootiger=0x7f080029;
         public static final int playbutton=0x7f080023;
         public static final int popback=0x7f08001e;
         public static final int popblueback=0x7f08001d;
@@ -127,8 +128,8 @@ public final class R {
         public static final int soundbarback=0x7f080004;
         public static final int soundkeep=0x7f080016;
         public static final int tutbutton=0x7f080024;
-        public static final int tutleft=0x7f08002c;
-        public static final int tutright=0x7f08002b;
+        public static final int tutleft=0x7f08002d;
+        public static final int tutright=0x7f08002c;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;
